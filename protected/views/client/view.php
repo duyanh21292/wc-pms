@@ -11,7 +11,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://x.pms/clevel/getAllClientLevel'
+            url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevel'
         }).success(function(data){
                 $('.content_left_nav').append(data);
                 navSelectedListener();

@@ -53,11 +53,11 @@
         <table border="0" style="width: 1000px;margin: auto;">
             <tr class="form">
                 <td class="form info_form info_form_comp">Asset Number</td><td class="form value_form_comp"><input type="text" name="asset_number" style="width: 100%"></td>
-                <td class="form info_form info_form_comp">Manager</td><td class="form value_form_comp"><input id="ip_mng_no" type="text" name="mng_no" style="width: 200px;margin-right: 5px"><button class="bt_select" onclick="openNewWindow('http://x.pms/employees/getAllEmpWindow?id=ip_mng_no','Employees List')">Employee Select</button></td>
+                <td class="form info_form info_form_comp">Manager</td><td class="form value_form_comp"><input id="ip_mng_no" type="text" name="mng_no" style="width: 200px;margin-right: 5px"><button class="bt_select" onclick="openNewWindow('<?php echo Employees::BASE_URL ?>/employees/getAllEmpWindow?id=ip_mng_no','Employees List')">Employee Select</button></td>
             </tr>
             <tr class="form">
                 <td class="form info_form info_form_comp">Computer Name</td><td class="form value_form_comp"><input type="text" name="computer_name" style="width: 100%"></td>
-                <td class="form info_form info_form_comp">User</td><td class="form value_form_comp"><input id="ip_user_no" type="text" name="user_no" style="width: 200px;margin-right: 5px"><button class="bt_select" onclick="openNewWindow('http://x.pms/employees/getAllEmpWindow?id=ip_user_no','Employees List')">Employee Select</button></td>
+                <td class="form info_form info_form_comp">User</td><td class="form value_form_comp"><input id="ip_user_no" type="text" name="user_no" style="width: 200px;margin-right: 5px"><button class="bt_select" onclick="openNewWindow('<?php echo Employees::BASE_URL ?>/employees/getAllEmpWindow?id=ip_user_no','Employees List')">Employee Select</button></td>
             </tr>
             <tr class="form"><td colspan="4" class="form"><div class="separator_hor" style="height: 2px;width: 100%"></div></td></tr>
             <tr class="form">

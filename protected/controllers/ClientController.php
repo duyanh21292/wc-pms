@@ -184,14 +184,14 @@ class ClientController extends Controller
             function selectClient(no,name) {
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/contact/getAllContactCb\',
+                    url: \''.Employees::BASE_URL.'/contact/getAllContactCb\',
                     data: {client_id : no}
                 }).success(function(data){
                     window.opener.document.getElementById("cb_c_contact").disabled = false
                     window.opener.document.getElementById("cb_c_contact").innerHTML=data;
                     $.ajax({
                         type: \'GET\',
-                        url: \'http://x.pms/contact/getAllContactCb\',
+                        url: \''.Employees::BASE_URL.'/contact/getAllContactCb\',
                         data: {client_id : no}
                     }).success(function(data){
                         window.opener.document.getElementById("cb_c_fcontact").disabled = false

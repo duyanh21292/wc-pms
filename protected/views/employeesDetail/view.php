@@ -104,7 +104,7 @@
                 <script>
                     $.ajax({
                         type: 'GET',
-                        url: 'http://x.pms/education/getAllEduCb'
+                        url: '<?php echo Employees::BASE_URL ?>/education/getAllEduCb'
                     }).success(function(data){
                             $('#cb_edu').html(data);
                             $("#cb_edu").children().each(function(){

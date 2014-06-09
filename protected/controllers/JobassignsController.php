@@ -274,7 +274,7 @@ class JobassignsController extends Controller
                     <td style="text-align: center">'.$object->Quantity.'<br>'.$object->Unit.'</td>
                     <td style="text-align: center">'.$object->AssignedHour.'</td>
                     <td style="text-align: center">'.$object->Status.'<button class="bt_select" style="margin-left: 5px;">Complete</button></td>
-                    <td style="text-align:center"><div class="tool" onclick="openNewWindow(\'http://x.pms/timetrack/createTimetrackWindow?ja_id='.$object->JobAssign_ID.'\',\'Clients List\')">New</div></td>
+                    <td style="text-align:center"><div class="tool" onclick="openNewWindow(\''.Employees::BASE_URL.'/timetrack/createTimetrackWindow?ja_id='.$object->JobAssign_ID.'\',\'Clients List\')">New</div></td>
                 </tr>';
         }
         echo $result;

@@ -6,7 +6,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://x.pms/status/getAllStatus',
+            url: '<?php echo Employees::BASE_URL ?>/status/getAllStatus',
             data: { status_type : 'status'}
         }).success(function(data){
                 $('.content_left_nav').append(data);
@@ -35,7 +35,7 @@
                         <script>
                             $.ajax({
                                 type: 'GET',
-                                url: 'http://x.pms/status/getAllStatusCb',
+                                url: '<?php echo Employees::BASE_URL ?>/status/getAllStatusCb',
                                 data: { status_type : 'status'}
                             }).success(function(data){
                                     $('#cb_prj_status').html(data);

@@ -140,13 +140,13 @@
         <script>
             $.ajax({
                 type: 'GET',
-                url: 'http://x.pms/employees/getEmployeeByJob',
+                url: '<?php echo Employees::BASE_URL ?>/employees/getEmployeeByJob',
                 data: {job : 'Pm'}
             }).success(function(data){
                     $('#cb_prj_mng').append(data);
                     $.ajax({
                         type: 'GET',
-                        url: 'http://x.pms/employees/getEmployeeByJob',
+                        url: '<?php echo Employees::BASE_URL ?>/employees/getEmployeeByJob',
                         data: {job : 'Sales'}
                     }).success(function(data){
                             $('#cb_sales_mng').append(data);

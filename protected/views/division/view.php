@@ -23,7 +23,7 @@
                 <script>
                     $.ajax({
                         type: 'GET',
-                        url: 'http://x.pms/department/getDeptOrganization',
+                        url: '<?php echo Employees::BASE_URL ?>/department/getDeptOrganization',
                         data: {div_id: <?php echo "'".$obj->Division_ID."'" ?>}
                     }).success(function(data){
                             $('#org_div_' + <?php echo "'".$obj->Division_ID."'" ?>).append(data+

@@ -5,7 +5,7 @@
     $criteria->params = array(':User_ID'=>$user_id);
     $modelUser = Users::model()->find($criteria);
     if (empty($modelUser)) {
-        header('Location: http://x.pms/');
+        header('Location: '.Employees::BASE_URL);
     }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -50,12 +50,12 @@
                             <div class="a">Company</div>
                             <ul>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/company/getCompanyInfo">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/company/getCompanyInfo">
                                         <div class="pl_menu_item_text">Basic Information</div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/division/getAllDivOrganization">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/division/getAllDivOrganization">
                                         <div style="position: relative;left:-2px;top:-4px;width: 180px;height: 1px;background-color: #fff"></div>
                                         <div class="pl_menu_item_text">Organization</div>
                                     </a>
@@ -73,13 +73,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/computer/getAllComp">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/computer/getAllComp">
                                         <div style="position: relative;left:-2px;top:-4px;width: 180px;height: 1px;background-color: #fff"></div>
                                         <div class="pl_menu_item_text">Computer Management</div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/currency/getAllCurrency">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/currency/getAllCurrency">
                                         <div style="position: relative;left:-2px;top:-4px;width: 180px;height: 1px;background-color: #fff"></div>
                                         <div class="pl_menu_item_text">Currency</div>
                                     </a>
@@ -120,7 +120,7 @@
                             <div class="a">Employees</div>
                             <ul>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/employees/getAllEmployees">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/employees/getAllEmployees">
                                         <div class="pl_menu_item_text">Employees Management</div>
                                     </a>
                                 </li>
@@ -131,7 +131,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/employees/getAllContactInfo">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/employees/getAllContactInfo">
                                         <div style="position: relative;left:-2px;top:-4px;width: 180px;height: 1px;background-color: #fff"></div>
                                         <div class="pl_menu_item_text">Contact Information</div>
                                     </a>
@@ -166,12 +166,12 @@
                             <div class="a">Client</div>
                             <ul>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/client/getAllClient">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/client/getAllClient">
                                         <div class="pl_menu_item_text">Client Management</div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/client/clientMailing">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/client/clientMailing">
                                         <div style="position: relative;left:-2px;top:-4px;width: 180px;height: 1px;background-color: #fff"></div>
                                         <div class="pl_menu_item_text">Client Mailing</div>
                                     </a>
@@ -210,7 +210,7 @@
                             <div class="a">Project</div>
                             <ul>
                                 <li>
-                                    <a class="menu_item" href="http://x.pms/projects/getAllProjects">
+                                    <a class="menu_item" href="<?php echo Employees::BASE_URL ?>/projects/getAllProjects">
                                         <div class="pl_menu_item_text">Project Management</div>
                                     </a>
                                 </li>

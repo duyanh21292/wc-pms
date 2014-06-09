@@ -25,7 +25,7 @@
 
         $.ajax({
             type: 'POST',
-            url: 'http://x.pms/client/createClient',
+            url: '<?php echo Employees::BASE_URL ?>/client/createClient',
             data: {'client_name' : client_name,
                 'tel' : tel,
                 'fax' : fax,
@@ -127,13 +127,13 @@
                     });
                 $.ajax({
                     type: 'GET',
-                    url: 'http://x.pms/clevel/getAllClientLevelCb'
+                    url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevelCb'
                 }).success(function(data){
                         $('#cb_level').append(data);
                     });
                 $.ajax({
                     type: 'GET',
-                    url: 'http://x.pms/clevel/getAllClientLevelInfo'
+                    url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevelInfo'
                 }).success(function(data){
                         $('#td_client_level').append(data);
                     });
