@@ -10,7 +10,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://x.pms/division/getAllDivision'
+            url: '<?php echo Employees::BASE_URL ?>/division/getAllDivision'
         }).success(function(data){
                 $('.content_left_nav').html('<div class="nav_item_emp"><div class="nav_item_parent_emp nav_selected">All list</div></div>' + data + '<div class="nav_item_emp"><div class="nav_item_parent_emp">My List</div></div>');
                 navEmpSelectedListener();
@@ -62,7 +62,7 @@
             <script>
                 $.ajax({
                     type: 'GET',
-                    url: 'http://x.pms/job/getAllJobCb'
+                    url: '<?php echo Employees::BASE_URL ?>/job/getAllJobCb'
                 }).success(function(data){
                         $('#cb_job_search').append(data);
                     });

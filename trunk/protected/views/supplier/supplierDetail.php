@@ -8,7 +8,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://x.pms/suppliertype/getAllSupplierType'
+            url: '<?php echo Employees::BASE_URL ?>/suppliertype/getAllSupplierType'
         }).success(function(data){
                 $('.content_left_nav').append(data);
             });

@@ -194,7 +194,7 @@ class ContactController extends Controller
         $model = ClientContactInfo::model()->findAll($criteria);
 
         foreach ($model as $object) {
-            $result = $result.'<tr class="contact_row"><td style="text-align:center"><div style="cursor:pointer" onclick="openNewWindow(\'http://x.pms/contact/modifyContactWindow?contact_id='.$object->Contact_ID.'&client_name='.$object->ClientName.'\',\'Modify Contact\',800,600)">'.$object->ContactName.'</div></td><td style="text-align:center">'.$object->Department.'</td><td style="text-align:center">'.$object->Job.'</td><td style="text-align:center">'.$object->Tel.'</td><td style="text-align:center">'.$object->Fax.'</td><td style="text-align:center">'.$object->Mobile.'</td><td style="text-align:center">'.$object->Email.'</td></tr>';
+            $result = $result.'<tr class="contact_row"><td style="text-align:center"><div style="cursor:pointer" onclick="openNewWindow(\''.Employees::BASE_URL.'/contact/modifyContactWindow?contact_id='.$object->Contact_ID.'&client_name='.$object->ClientName.'\',\'Modify Contact\',800,600)">'.$object->ContactName.'</div></td><td style="text-align:center">'.$object->Department.'</td><td style="text-align:center">'.$object->Job.'</td><td style="text-align:center">'.$object->Tel.'</td><td style="text-align:center">'.$object->Fax.'</td><td style="text-align:center">'.$object->Mobile.'</td><td style="text-align:center">'.$object->Email.'</td></tr>';
         }
         echo $result;
     }
@@ -293,14 +293,14 @@ class ContactController extends Controller
         <script type="text/javascript">
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/employees/getEmployeeByJob\',
+                    url: \''.Employees::BASE_URL.'/employees/getEmployeeByJob\',
                     data: {job : \'Pm\'}
                 }).success(function(data){
                     $(\'#cb_prj_mng\').append(data);
                 });
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/employees/getEmployeeByJob\',
+                    url: \''.Employees::BASE_URL.'/employees/getEmployeeByJob\',
                     data: {job : \'Sales\'}
                 }).success(function(data){
                     $(\'#cb_sales_mng\').append(data);
@@ -320,14 +320,14 @@ class ContactController extends Controller
                     var memo = $(\'[name="memo"]\').val();
                     $.ajax({
                         type: \'POST\',
-                        url: \'http://x.pms/contact/createNewContact\',
+                        url: \''.Employees::BASE_URL.'/contact/createNewContact\',
                         data: {\'client_id\' : client_id,\'contact_name\' : contact_name,\'department\' : department,\'job\' : job,\'tel\' : tel,\'fax\' : fax,\'mobile\' : mobile,\'email\' : email,\'sale_mng_no\' : sale_mng_no,\'prj_mng_no\' : prj_mng_no,\'memo\' :memo}
                     }).success(function(msg){
                             if(msg == 1){
                                 alert("Create Contact successful!");
                                 $.ajax({
                                     type: \'GET\',
-                                    url: \'http://x.pms/contact/getClientContact\',
+                                    url: \''.Employees::BASE_URL.'/contact/getClientContact\',
                                     data: {\'client_id\': \''.$client_id.'\'}
                                 }).success(function(data){
                                     window.opener.jQuery(".contact_row").remove();
@@ -386,7 +386,7 @@ class ContactController extends Controller
         <script type="text/javascript">
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/employees/getEmployeeByJob\',
+                    url: \''.Employees::BASE_URL.'/employees/getEmployeeByJob\',
                     data: {job : \'Pm\'}
                 }).success(function(data){
                     $(\'#cb_prj_mng\').append(data);
@@ -399,7 +399,7 @@ class ContactController extends Controller
                 });
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/employees/getEmployeeByJob\',
+                    url: \''.Employees::BASE_URL.'/employees/getEmployeeByJob\',
                     data: {job : \'Sales\'}
                 }).success(function(data){
                     $(\'#cb_sales_mng\').append(data);
@@ -424,14 +424,14 @@ class ContactController extends Controller
                     var memo = $(\'[name="memo"]\').val();
                     $.ajax({
                         type: \'POST\',
-                        url: \'http://x.pms/contact/modifyContact\',
+                        url: \''.Employees::BASE_URL.'/contact/modifyContact\',
                         data: {\'contact_id\' : '.$contact_id.',\'contact_name\' : contact_name,\'department\' : department,\'job\' : job,\'tel\' : tel,\'fax\' : fax,\'mobile\' : mobile,\'email\' : email,\'sale_mng_no\' : sale_mng_no,\'prj_mng_no\' : prj_mng_no,\'memo\' :memo}
                     }).success(function(msg){
                             if(msg == 1){
                                 alert("Modify Contact successful!");
                                 $.ajax({
                                     type: \'GET\',
-                                    url: \'http://x.pms/contact/getClientContact\',
+                                    url: \''.Employees::BASE_URL.'/contact/getClientContact\',
                                     data: {\'client_id\': \''.$model->Client_ID.'\'}
                                 }).success(function(data){
                                     window.opener.jQuery(".contact_row").remove();

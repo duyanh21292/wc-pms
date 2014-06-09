@@ -233,7 +233,7 @@ class TimetrackController extends Controller
         <script type="text/javascript">
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/task/getAllTaskCb\'
+                    url: \''.Employees::BASE_URL.'/task/getAllTaskCb\'
                 }).success(function(data){
                     $("#cb_task").append(data);
                     $("#cb_task").children().each(function(){
@@ -245,7 +245,7 @@ class TimetrackController extends Controller
                 });
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/activities/getAllActivitiesCb\',
+                    url: \''.Employees::BASE_URL.'/activities/getAllActivitiesCb\',
                     data: {task_id: \''.$task_id.'\'}
                 }).success(function(data){
                     $("#cb_activities").html(\'<option value="select">------Select------</option>\' + data);
@@ -258,7 +258,7 @@ class TimetrackController extends Controller
                 });
                 $.ajax({
                     type: \'GET\',
-                    url: \'http://x.pms/unit/getAllUnitCb\'
+                    url: \''.Employees::BASE_URL.'/unit/getAllUnitCb\'
                 }).success(function(data){
                     $("#cb_unit").html(data);
                     $("#cb_unit").children().each(function(){
@@ -291,7 +291,7 @@ class TimetrackController extends Controller
                     var comment = $(\'[name="comments"]\').val();
                     $.ajax({
                         type: \'GET\',
-                        url: \'http://x.pms/timetrack/createTimetrack\',
+                        url: \''.Employees::BASE_URL.'/timetrack/createTimetrack\',
                         data: {\'ja_id\': ja_id, \'date\': date, \'start_time\': start_time, \'end_time\': end_time, \'task_id\': task_id, \'activities_id\': activities_id, \'unit\': unit, \'quantity\': quantity, \'comment\':comment}
                     }).success(function(msg){
                             if(msg == 1){

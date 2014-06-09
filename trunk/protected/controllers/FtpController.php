@@ -238,14 +238,14 @@ class FtpController extends Controller
                 var memo = $(\'[name="memo"]\').val();
                 $.ajax({
                     type: \'POST\',
-                    url: \'http://x.pms/ftp/createNewFtp\',
+                    url: \'<?php echo Employees::BASE_URL ?>/ftp/createNewFtp\',
                     data: {\'client_id\' : client_id,\'name\' : name,\'url\' : url,\'user_name\' : user_name,\'password\' : password,\'memo\' :memo}
                 }).success(function(msg){
                         if(msg == 1){
                             alert("Create FTP successful!");
                             $.ajax({
                                 type: \'GET\',
-                                url: \'http://x.pms/ftp/getClientFtp\',
+                                url: \'<?php echo Employees::BASE_URL ?>/ftp/getClientFtp\',
                                 data: {\'client_id\': \''.$client_id.'\'}
                             }).success(function(data){
                                 window.opener.jQuery(".ftp_row").remove();

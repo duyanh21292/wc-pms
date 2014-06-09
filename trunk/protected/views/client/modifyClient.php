@@ -24,7 +24,7 @@
 
         $.ajax({
             type: 'POST',
-            url: 'http://x.pms/client/updateClient',
+            url: '<?php echo Employees::BASE_URL ?>/client/updateClient',
             data: {'client_id': client_id,'client_name' : client_name,'tel' : tel,'fax' : fax,'zip_code' : zip_code,'address' : address,'url' : url,'location' : location,'country_id' : country_id,'level_id' : level_id,'memo' : memo,'status' : status,'modify_date' : modify_date}
         }).success(function(msg){
                 if(msg == 1){
@@ -46,7 +46,7 @@
     <script>
         $.ajax({
             type: 'GET',
-            url: 'http://x.pms/clevel/getAllClientLevel'
+            url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevel'
         }).success(function(data){
                 $('.content_left_nav').append(data);
             });
@@ -144,13 +144,13 @@
                         });
                     $.ajax({
                         type: 'GET',
-                        url: 'http://x.pms/clevel/getAllClientLevelInfo'
+                        url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevelInfo'
                     }).success(function(data){
                             $('#td_client_level').append(data);
                         });
                     $.ajax({
                         type: 'GET',
-                        url: 'http://x.pms/clevel/getAllClientLevelCb'
+                        url: '<?php echo Employees::BASE_URL ?>/clevel/getAllClientLevelCb'
                     }).success(function(data){
                             $('#cb_level').append(data);
                             $("#cb_level").children().each(function(){

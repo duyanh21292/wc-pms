@@ -46,7 +46,7 @@
                 var memo = $('[name="memo"]').val();
                 $.ajax({
                     type: 'POST',
-                url: 'http://x.pms/suppliercontact/createNewContact',
+                url: '<?php echo Employees::BASE_URL ?>/suppliercontact/createNewContact',
                 data: {'supp_no' : supp_no,'name' : name,'department' : department,'job' : job,'tel' : tel,'fax' : fax,'mobile' : mobile,'email' : email,'memo' :memo}
                 }).success(function(msg){
                     if(msg == 1){

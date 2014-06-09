@@ -68,7 +68,7 @@
             <script>
                 $.ajax({
                     type: 'GET',
-                    url: 'http://x.pms/job/getAllJobCb'
+                    url: '<?php echo Employees::BASE_URL ?>/job/getAllJobCb'
                 }).success(function(data){
                         $('#cb_job_search').append(data);
                     });
