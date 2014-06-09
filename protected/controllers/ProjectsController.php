@@ -356,7 +356,7 @@ class ProjectsController extends Controller
                     </td>
                     <td style="width: 250px;text-align: center">'.$object->ClientName.'
                         <div style="font-family: pms-font-regular, Arial, sans-serif;">'.$object->ContactName.'</div></td>
-                    <td class="cell_no" style="width: 200px"><div style="float: left"><input name="select_budget" type="checkbox" value="'.$object->Budget.'"></div>'.$object->Budget .' VND</td>
+                    <td class="cell_no" style="width: 200px"><div style="float: left"><input name="select_budget" type="checkbox" value="'.$object->Budget.'"></div>'.number_format($object->Budget,4,".",",").' VND</td>
                     <td class="cell_no" style="width: 100px">0</td>
                     <td style="text-align: center;width: 95px">'.$object->Status .'<br>'.$object->FStatus .'</td>
                     <td style="text-align: center;width: 80px">'.$regDate .'<br>'.$dueDate.'</td>
@@ -366,10 +366,13 @@ class ProjectsController extends Controller
                 <td class="total" colspan="3">Total</td>
                 <td class="total">
                     <div class="num_total_selected">0</div>
-                    <div class="num_total">'.$total.' VND</div>
+                    <div class="num_total">'.number_format($total,4,".",",").' VND</div>
                 </td>
                 <td class="total" colspan="3"></td>
-            </tr>';
+            </tr>
+            <script>
+            budgetSelected();
+        </script>';
         echo $result;
     }
 

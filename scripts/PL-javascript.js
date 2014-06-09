@@ -498,6 +498,16 @@ function actionSearch(){
     }
 }
 
+function budgetSelected(){
+    $('[name="select_budget"]').click(function(){
+        var total_selected = 0;
+        $('[name="select_budget"]:checked').each(function(){
+            total_selected = total_selected + parseInt($(this).val());
+        });
+        $('.num_total_selected').text(addCommas(parseFloat(total_selected).toFixed(4)));
+    })
+}
+
 function getProjectDataFilter(urlDataResult,table_list_id,f_status_id,industry_id,reg_date_from,reg_date_to){
     $('.page_number').click(function(event){
         var _this = $(this);
@@ -1065,6 +1075,20 @@ function changeFlagIcon(country_name){
     $('.flag_icon').css('background-image',url);
 //    alert(url);
 }
+
+function addCommas(nStr)
+{
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
 $(document).ready(function() {
     $(".nav li").hover(function() {
         $(this).addClass('hover');
