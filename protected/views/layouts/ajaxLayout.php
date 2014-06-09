@@ -29,7 +29,9 @@
             <?php if(isset($_SESSION['user'])) { echo "<div style=\"text-align: right;margin-top: 2px;color: #f37020;font-weight: normal;font-family: pms-font-semibold, Arial, sans-serif;font-size: 14px;margin-left: 50px;margin-right: 80px;\">".$_SESSION['user']."</div><div style=\"text-align: right;font-size: smaller;color: #464646;font-family: pms-font-semibold, Arial, sans-serif;margin-left: 50px;margin-right: 80px;\">".$_SESSION['role']."</div>";}?>
             <div class="separator_ver" style="position: absolute;height: 30px;top: 5px;right: 75px;border-color: #B8B8B8;"></div>
             <i class="icon ion-ios7-email emp_email" style="font-size: 30px;position: absolute;top: 6px;right: 40px;cursor: pointer;" title="Email"></i>
-            <i class="icon ion-log-out log_out" style="font-size: 30px;position: absolute;top: 6px;right: 5px;cursor: pointer;" title="Sign Out"></i>
+            <a href="<?php echo Employees::BASE_URL?>/employees/logout">
+                <div class="icon ion-log-out log_out" style="font-size: 30px;position: absolute;top: 6px;right: 5px;cursor: pointer;" title="Sign Out"></div>
+            </a>
         </div>
     </div>
     <div class="menubar_frame">

@@ -28,7 +28,7 @@ class EmployeesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','login','getEmpResult','getAllEmployees','getEmployeeByJob','getAllEmpWindow','getAllContactInfo','getTotalPageNum'),
+				'actions'=>array('index','view','login','getEmpResult','getAllEmployees','getEmployeeByJob','getAllEmpWindow','getAllContactInfo','getTotalPageNum','logout'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -268,6 +268,12 @@ class EmployeesController extends Controller
             }
         }
         echo $result;
+    }
+
+    public function actionLogout(){
+        session_start();
+        session_destroy();
+        Header( "Location: ".Employees::BASE_URL );
     }
 
     public function actionLogin(){
