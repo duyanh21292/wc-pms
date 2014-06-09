@@ -1,5 +1,5 @@
 <div class="icon ion-ios7-trash-outline bt_crud_26 delete" style="float: right;margin-top: 2px;margin-left: 10px;margin-right: 10px" title="Drop"></div>
-<div class="icon ion-ios7-compose-outline bt_crud_26 modify" style="float: right;margin-top: 2px" title="Modify"></div>
+<div class="icon ion-ios7-compose-outline bt_crud_26 modify" style="float: right;margin-top: 2px" title="Modify" onclick="goToPage('<?php echo Employees::BASE_URL ?>/po/modifyPo?po_no=<?php echo $model->PoNo ?>')"></div>
 <table style="width: 100%">
     <tr class="client_detail">
         <td class="po_detail">Po No.</td>
@@ -17,17 +17,17 @@
         <td class="po_detail">Supplier</td>
         <td class="po_detail value_prj_detail"><?php echo($model->SupplierName) ?></td>
         <td class="po_detail">Amount</td>
-        <td class="po_detail value_prj_detail"><?php echo $model->Amount ?></td>
+        <td class="po_detail value_prj_detail"><?php echo number_format($model->Amount,4,".",",") ?></td>
     </tr>
     <tr class="client_detail">
         <td class="po_detail">Unit</td>
         <td class="po_detail value_prj_detail"><?php echo($model->Unit) ?></td>
         <td class="po_detail">U/Price</td>
-        <td class="po_detail value_prj_detail"><?php echo $model->UPrice ?></td>
+        <td class="po_detail value_prj_detail"><?php echo number_format($model->UPrice,4,".",",")  ?></td>
     </tr>
     <tr class="client_detail">
         <td class="po_detail">Quantity</td>
-        <td class="po_detail value_prj_detail"><?php echo($model->Quantity) ?></td>
+        <td class="po_detail value_prj_detail"><?php echo number_format($model->Quantity,4,".",",") ?></td>
         <td class="po_detail">Currency</td>
         <td class="po_detail value_prj_detail"><?php echo $model->Currency ?></td>
     </tr>

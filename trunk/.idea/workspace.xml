@@ -22,92 +22,39 @@
     <favorites_list name="phanle" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5425985">
+    <splitter split-orientation="horizontal" split-proportion="0.61608094">
       <split-first>
         <leaf>
-          <file leaf-file-name="PLcss.css" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/css/PLcss.css">
+          <file leaf-file-name="CurrencyController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/controllers/CurrencyController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="411" column="29" selection-start="7520" selection-end="7520" vertical-scroll-proportion="0.4288939" vertical-offset="6607" max-vertical-offset="16490">
+                <state line="201" column="33" selection-start="5365" selection-end="5365" vertical-scroll-proportion="-23.653847" vertical-offset="2802" max-vertical-offset="3723">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="modifyProject.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protected/views/projects/modifyProject.php">
+          <file leaf-file-name="listPOByPrj.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/views/po/listPOByPrj.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="151" column="134" selection-start="8934" selection-end="8934" vertical-scroll-proportion="-2.6153846" vertical-offset="2499" max-vertical-offset="4556">
+                <state line="97" column="117" selection-start="5808" selection-end="5845" vertical-scroll-proportion="-26.76923" vertical-offset="953" max-vertical-offset="1853">
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#7;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#8;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#9;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#10;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#11;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#12;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#13;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#14;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#td#1;n#tr#15;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#td#1;n#tr#16;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#17;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#td#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#button#0;n#td#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#5;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Employees.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protected/models/Employees.php">
+          <file leaf-file-name="listSpecByPrj.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/views/spec/listSpecByPrj.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="10" selection-start="1050" selection-end="1050" vertical-scroll-proportion="8.384615" vertical-offset="847" max-vertical-offset="2771">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PL-javascript.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1046" column="9" selection-start="47865" selection-end="47865" vertical-scroll-proportion="0.0" vertical-offset="17432" max-vertical-offset="19329">
-                  <folding>
-                    <marker date="1401781219563" expanded="false" signature="27753:27765" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="27955:27973" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="28120:28138" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="28673:28691" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="28838:28856" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="31853:31864" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="31961:31975" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="35518:35528" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="35575:35588" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="36407:36423" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="36675:36691" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="36898:36914" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="37075:37087" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="37249:37261" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="38040:38052" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="38098:38111" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="38149:38167" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="38201:38219" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="40152:40192" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="40292:40304" placeholder="..." />
-                    <marker date="1401781219563" expanded="false" signature="41834:41862" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProjectsController.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="451" column="27" selection-start="16998" selection-end="16998" vertical-scroll-proportion="-13.923077" vertical-offset="7305" max-vertical-offset="8228">
+                <state line="82" column="25" selection-start="5537" selection-end="5537" vertical-scroll-proportion="-25.615385" vertical-offset="728" max-vertical-offset="1598">
                   <folding />
                 </state>
               </provider>
@@ -116,8 +63,14 @@
           <file leaf-file-name="projectDetail.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/protected/views/projects/projectDetail.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="126" column="221" selection-start="8631" selection-end="8631" vertical-scroll-proportion="-68.19231" vertical-offset="369" max-vertical-offset="2567">
+                <state line="120" column="104" selection-start="8614" selection-end="8614" vertical-scroll-proportion="-22.346153" vertical-offset="1459" max-vertical-offset="2533">
                   <folding>
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#0;n#tr#5;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#td#0;n#tr#10;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#3;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -126,14 +79,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protected/views/projects/view.php">
+          <file leaf-file-name="JobassignsController.php" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/protected/controllers/JobassignsController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="136" column="50" selection-start="7950" selection-end="7968" vertical-scroll-proportion="-23.076923" vertical-offset="1712" max-vertical-offset="2584">
-                  <folding>
-                    <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#tr#2;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="253" column="50" selection-start="7941" selection-end="7941" vertical-scroll-proportion="0.44942528" vertical-offset="3910" max-vertical-offset="4896">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -142,10 +92,46 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="createProject.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/protected/views/projects/createProject.php">
+          <file leaf-file-name="PoInfo.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/models/PoInfo.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="41" selection-start="1994" selection-end="1994" vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="2125">
+                <state line="97" column="22" selection-start="3231" selection-end="3240" vertical-scroll-proportion="-3.8846154" vertical-offset="1548" max-vertical-offset="3009">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PoController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/controllers/PoController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="309" column="21" selection-start="9455" selection-end="9455" vertical-scroll-proportion="-22.23077" vertical-offset="4675" max-vertical-offset="6103">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PrjAmount.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/models/PrjAmount.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="64" column="24" selection-start="1534" selection-end="1545" vertical-scroll-proportion="-20.26923" vertical-offset="561" max-vertical-offset="1564">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProjectsController.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="279" column="51" selection-start="8631" selection-end="8631" vertical-scroll-proportion="-9.115385" vertical-offset="4506" max-vertical-offset="8687">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PrjDetail.php" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/protected/models/PrjDetail.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="148" column="22" selection-start="5352" selection-end="5361" vertical-scroll-proportion="0.9210836" vertical-offset="1734" max-vertical-offset="3638">
                   <folding />
                 </state>
               </provider>
@@ -160,10 +146,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Projects.php" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/protected/models/Projects.php">
+          <file leaf-file-name="poDetail.php" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/protected/views/po/poDetail.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="90" column="22" selection-start="2996" selection-end="3005" vertical-scroll-proportion="0.3635321" vertical-offset="1213" max-vertical-offset="2839">
+                <state line="29" column="88" selection-start="1877" selection-end="1877" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="935">
                   <folding />
                 </state>
               </provider>
@@ -184,28 +170,36 @@
         <option value="$PROJECT_DIR$/protected/controllers/PostatusController.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/ajaxLayout.php" />
         <option value="$PROJECT_DIR$/protected/views/projects/projectChooserWindow.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/UnitController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ClientController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/StatusController.php" />
+        <option value="$PROJECT_DIR$/protected/views/client/clientDetail.php" />
+        <option value="$PROJECT_DIR$/protected/views/po/view.php" />
+        <option value="$PROJECT_DIR$/protected/models/ProjectsInfo.php" />
+        <option value="$PROJECT_DIR$/protected/views/projects/modifyProject.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SupplierController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SuppliercontactController.php" />
         <option value="$PROJECT_DIR$/protected/views/supplier/supplierChooserWindow.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/UnitController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/JobassignsController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ClientController.php" />
-        <option value="$PROJECT_DIR$/scripts/PL-javascript.js" />
-        <option value="$PROJECT_DIR$/protected/controllers/StatusController.php" />
-        <option value="$PROJECT_DIR$/protected/views/client/clientDetail.php" />
-        <option value="$PROJECT_DIR$/protected/views/jobassigns/jobassignByProj.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/PoController.php" />
-        <option value="$PROJECT_DIR$/protected/views/po/view.php" />
-        <option value="$PROJECT_DIR$/protected/views/po/poDetail.php" />
-        <option value="$PROJECT_DIR$/protected/views/po/listPOByPrj.php" />
-        <option value="$PROJECT_DIR$/protected/views/po/createPO.php" />
+        <option value="$PROJECT_DIR$/protected/views/po/modifyPO.php" />
         <option value="$PROJECT_DIR$/protected/views/projects/createProject.php" />
-        <option value="$PROJECT_DIR$/protected/views/projects/projectDetail.php" />
-        <option value="$PROJECT_DIR$/protected/models/ProjectsInfo.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ProjectsController.php" />
-        <option value="$PROJECT_DIR$/protected/views/projects/modifyProject.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/EmployeesController.php" />
+        <option value="$PROJECT_DIR$/protected/views/po/createPO.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SpectaskController.php" />
+        <option value="$PROJECT_DIR$/protected/views/jobassigns/createJobassign.php" />
+        <option value="$PROJECT_DIR$/scripts/PL-javascript.js" />
+        <option value="$PROJECT_DIR$/protected/views/jobassigns/jobassignByProj.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/CurrencyController.php" />
         <option value="$PROJECT_DIR$/protected/views/projects/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/spec/createSpec.php" />
         <option value="$PROJECT_DIR$/css/PLcss.css" />
+        <option value="$PROJECT_DIR$/protected/views/spec/listSpecByPrj.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SpecController.php" />
+        <option value="$PROJECT_DIR$/protected/views/po/listPOByPrj.php" />
+        <option value="$PROJECT_DIR$/protected/views/po/poDetail.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/PoController.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ProjectsController.php" />
+        <option value="$PROJECT_DIR$/protected/views/projects/projectDetail.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/JobassignsController.php" />
       </list>
     </option>
   </component>
@@ -270,6 +264,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -289,6 +297,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="supplier" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spectask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,6 +385,94 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jobassigns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phanle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -410,7 +572,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -419,7 +581,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15761448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14483494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -427,11 +589,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -451,149 +613,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/supplier/supplierChooserWindow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="47" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SuppliercontactController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="86" selection-start="7212" selection-end="7212" vertical-scroll-proportion="0.0" vertical-offset="3401" max-vertical-offset="4250" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SupplierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="196" selection-start="929" selection-end="949" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="6885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="4" selection-start="8164" selection-end="8556" vertical-scroll-proportion="0.0" vertical-offset="3231" max-vertical-offset="4947">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/createProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="309" selection-start="6590" selection-end="6590" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="2108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/ProjectsInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="31" selection-start="3433" selection-end="3451" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="3145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/projectChooserWindow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="0" selection-end="2402" vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/supplier/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="274" selection-start="6943" selection-end="7193" vertical-scroll-proportion="0.0" vertical-offset="1820" max-vertical-offset="2669">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/SupplierInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="16" selection-start="4122" selection-end="4125" vertical-scroll-proportion="0.0" vertical-offset="1683" max-vertical-offset="3451" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/po/createPO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="33" selection-start="3864" selection-end="3873" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="3128">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Suppliercontact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="17" selection-start="1947" selection-end="1951" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1989" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/ajaxLayout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="108" selection-start="13482" selection-end="13482" vertical-scroll-proportion="0.54587156" vertical-offset="3213" max-vertical-offset="5219">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/DeliverymethodController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="71" selection-start="808" selection-end="830" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="3196" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/PostatusController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="63" selection-start="802" selection-end="816" vertical-scroll-proportion="-19.615385" vertical-offset="0" max-vertical-offset="3196" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Suppliercontact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="17" selection-start="1947" selection-end="1951" vertical-scroll-proportion="0.17903416" vertical-offset="1106" max-vertical-offset="1989" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SupplierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="0" selection-start="13871" selection-end="13871" vertical-scroll-proportion="0.9799764" vertical-offset="5951" max-vertical-offset="6885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Po.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="689" selection-end="689" vertical-scroll-proportion="-11.153846" vertical-offset="135" max-vertical-offset="2431" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/projectChooserWindow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="95" selection-start="774" selection-end="780" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/supplier/supplierChooserWindow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="100" selection-start="2651" selection-end="2657" vertical-scroll-proportion="-21.576923" vertical-offset="255" max-vertical-offset="1955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SuppliercontactController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="64" selection-start="7178" selection-end="7190" vertical-scroll-proportion="-24.153847" vertical-offset="3401" max-vertical-offset="4250" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/client/createClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="871" selection-end="908" vertical-scroll-proportion="0.3908046" vertical-offset="0" max-vertical-offset="2516" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/SupplierInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="32" selection-start="4736" selection-end="4736" vertical-scroll-proportion="3.2692308" vertical-offset="2397" max-vertical-offset="3451" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/jobassigns/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/supplier/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="118" selection-start="7275" selection-end="7369" vertical-scroll-proportion="-22.346153" vertical-offset="1748" max-vertical-offset="2669">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/jquery.number.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10744" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/UnitController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="177" column="64" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.78822196" vertical-offset="2313" max-vertical-offset="3196" />
@@ -604,21 +623,9 @@
         <state line="177" column="65" selection-start="4538" selection-end="4572" vertical-scroll-proportion="0.37132785" vertical-offset="2693" max-vertical-offset="3570" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/StatusController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="140" selection-start="5579" selection-end="5579" vertical-scroll-proportion="-26.346153" vertical-offset="2800" max-vertical-offset="3672" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/client/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="34" selection-start="2996" selection-end="3317" vertical-scroll-proportion="0.5848624" vertical-offset="510" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/JobassignsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="42" selection-start="5522" selection-end="5538" vertical-scroll-proportion="0.0" vertical-offset="3180" max-vertical-offset="4505">
           <folding />
         </state>
       </provider>
@@ -637,60 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/PoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="40" selection-start="8073" selection-end="8073" vertical-scroll-proportion="0.0" vertical-offset="4641" max-vertical-offset="4930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/jobassigns/jobassignByProj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="14" selection-start="2616" selection-end="2616" vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/PoInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="17" selection-start="3209" selection-end="3213" vertical-scroll-proportion="-9.807693" vertical-offset="1377" max-vertical-offset="3009">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/po/poDetail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="91" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/po/listPOByPrj.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="224" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1649">
-          <folding>
-            <marker date="1401857392163" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1401857392163" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1401857392163" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1401857392163" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/po/createPO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="19" selection-start="9744" selection-end="9744" vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="3689">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/client/modifyClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="66" selection-start="8751" selection-end="8781" vertical-scroll-proportion="-14.192307" vertical-offset="2011" max-vertical-offset="2907">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/po/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="41" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.42889908" vertical-offset="255" max-vertical-offset="1394">
@@ -698,16 +651,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/createProject.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Employees.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="41" selection-start="1994" selection-end="1994" vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="2125">
+        <state line="37" column="10" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/client/modifyClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="111" selection-start="6290" selection-end="6316" vertical-scroll-proportion="-17.461538" vertical-offset="1399" max-vertical-offset="2907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/projects/modifyProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="239" column="27" selection-start="13083" selection-end="13386" vertical-scroll-proportion="-14.5" vertical-offset="3686" max-vertical-offset="4556">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="87" selection-start="5842" selection-end="5850" vertical-scroll-proportion="0.56766057" vertical-offset="2837" max-vertical-offset="9010">
+        <state line="196" column="87" selection-start="5842" selection-end="5850" vertical-scroll-proportion="0.58303887" vertical-offset="2837" max-vertical-offset="9010">
           <folding>
             <marker date="1401769171057" expanded="true" signature="-1:-1" placeholder="..." />
             <marker date="1401769171057" expanded="true" signature="-1:-1" placeholder="..." />
@@ -732,14 +699,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/projectDetail.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/SupplierInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="221" selection-start="8631" selection-end="8631" vertical-scroll-proportion="-68.19231" vertical-offset="369" max-vertical-offset="2567">
+        <state line="135" column="22" selection-start="4686" selection-end="4695" vertical-scroll-proportion="-26.26923" vertical-offset="1612" max-vertical-offset="3451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SupplierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="431" column="64" selection-start="15450" selection-end="15450" vertical-scroll-proportion="-23.5" vertical-offset="6716" max-vertical-offset="7565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SuppliercontactController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="44" selection-start="7155" selection-end="7170" vertical-scroll-proportion="0.7517241" vertical-offset="3375" max-vertical-offset="4250">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <marker date="1401943385806" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/supplier/supplierChooserWindow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="121" selection-start="2910" selection-end="2910" vertical-scroll-proportion="0.6342016" vertical-offset="307" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/employees/empContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="88" selection-start="3329" selection-end="3329" vertical-scroll-proportion="-18.961538" vertical-offset="510" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/StatusController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="205" column="140" selection-start="5579" selection-end="5579" vertical-scroll-proportion="-27.26923" vertical-offset="2776" max-vertical-offset="3672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/EmployeesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="328" column="72" selection-start="11004" selection-end="11004" vertical-scroll-proportion="-16.346153" vertical-offset="5151" max-vertical-offset="7667">
+          <folding>
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402019733556" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="37" selection-start="2972" selection-end="2972" vertical-scroll-proportion="-11.0" vertical-offset="1193" max-vertical-offset="2839">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/po/modifyPO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="66" selection-start="3326" selection-end="3326" vertical-scroll-proportion="0.46059114" vertical-offset="663" max-vertical-offset="4624">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Spectask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="27" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.6353341" vertical-offset="510" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SpectaskController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="50" selection-start="803" selection-end="803" vertical-scroll-proportion="0.57757646" vertical-offset="0" max-vertical-offset="3196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TaskController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="4" selection-start="4209" selection-end="4486" vertical-scroll-proportion="0.7112118" vertical-offset="2330" max-vertical-offset="3213">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Spec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="22" selection-start="2033" selection-end="2042" vertical-scroll-proportion="0.5862069" vertical-offset="782" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/projects/createProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="23" selection-start="8528" selection-end="8776" vertical-scroll-proportion="-77.80769" vertical-offset="0" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/spec/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="854">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/jobassigns/createJobassign.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="20" selection-start="5414" selection-end="5414" vertical-scroll-proportion="2.122497" vertical-offset="0" max-vertical-offset="2244">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="857" column="31" selection-start="35366" selection-end="35366" vertical-scroll-proportion="0.4129412" vertical-offset="14167" max-vertical-offset="17867">
+          <folding>
+            <element signature="n#!!block;n#showAllTimetrackByEmp#0" expanded="false" />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402026858776" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/SpecInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="23" selection-start="2674" selection-end="2684" vertical-scroll-proportion="0.4722222" vertical-offset="1173" max-vertical-offset="2312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/jobassigns/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="909">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/JobassignsInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="20" selection-start="2982" selection-end="2989" vertical-scroll-proportion="0.8011494" vertical-offset="969" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/po/createPO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="64" selection-start="1275" selection-end="1316" vertical-scroll-proportion="-1.8137931" vertical-offset="2071" max-vertical-offset="3706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/supplier/createSupplier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="31" selection-start="18068" selection-end="18383" vertical-scroll-proportion="-18.307692" vertical-offset="4743" max-vertical-offset="5984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Currency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="24" selection-start="1683" selection-end="1694" vertical-scroll-proportion="0.9210836" vertical-offset="357" max-vertical-offset="1666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/spec/createSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="194" selection-start="854" selection-end="863" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/PLcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="413" column="9" selection-start="7527" selection-end="7532" vertical-scroll-proportion="-14.04" vertical-offset="6670" max-vertical-offset="16592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/jobassigns/jobassignByProj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="85" selection-start="4536" selection-end="4589" vertical-scroll-proportion="-23.5" vertical-offset="528" max-vertical-offset="1428">
+          <folding>
+            <element signature="n#style#0;n#td#7;n#tr#1;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#8;n#tr#1;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SpecController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="109" selection-start="8682" selection-end="8724" vertical-scroll-proportion="-22.192308" vertical-offset="3724" max-vertical-offset="4573">
+          <folding>
+            <marker date="1402041707098" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/projects/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="16" selection-start="8183" selection-end="8183" vertical-scroll-proportion="0.58965516" vertical-offset="1816" max-vertical-offset="2788">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Po.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="22" selection-start="2515" selection-end="2524" vertical-scroll-proportion="0.2735632" vertical-offset="1173" max-vertical-offset="2431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/po/listPOByPrj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="117" selection-start="5808" selection-end="5845" vertical-scroll-proportion="-26.76923" vertical-offset="953" max-vertical-offset="1853">
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#5;n#tr#1;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#2;n#table#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/spec/listSpecByPrj.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="25" selection-start="5537" selection-end="5537" vertical-scroll-proportion="-25.615385" vertical-offset="728" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/PoInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="22" selection-start="3231" selection-end="3240" vertical-scroll-proportion="-3.8846154" vertical-offset="1548" max-vertical-offset="3009">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -750,97 +974,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Projects.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/po/poDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="22" selection-start="2996" selection-end="3005" vertical-scroll-proportion="0.3635321" vertical-offset="1213" max-vertical-offset="2839">
+        <state line="29" column="88" selection-start="1877" selection-end="1877" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="935">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Employees.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/PrjAmount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="10" selection-start="1050" selection-end="1050" vertical-scroll-proportion="8.384615" vertical-offset="847" max-vertical-offset="2771">
+        <state line="64" column="24" selection-start="1534" selection-end="1545" vertical-scroll-proportion="-20.26923" vertical-offset="561" max-vertical-offset="1564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/PoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="309" column="21" selection-start="9455" selection-end="9455" vertical-scroll-proportion="-22.23077" vertical-offset="4675" max-vertical-offset="6103">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/CurrencyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="33" selection-start="5365" selection-end="5365" vertical-scroll-proportion="-23.653847" vertical-offset="2802" max-vertical-offset="3723">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="451" column="27" selection-start="16998" selection-end="16998" vertical-scroll-proportion="-13.923077" vertical-offset="7305" max-vertical-offset="8228">
+        <state line="279" column="51" selection-start="8631" selection-end="8631" vertical-scroll-proportion="-9.115385" vertical-offset="4506" max-vertical-offset="8687">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/modifyProject.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/PrjDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="134" selection-start="8934" selection-end="8934" vertical-scroll-proportion="-2.6153846" vertical-offset="2499" max-vertical-offset="4556">
+        <state line="148" column="22" selection-start="5352" selection-end="5361" vertical-scroll-proportion="0.9210836" vertical-offset="1734" max-vertical-offset="3638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/projects/projectDetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="104" selection-start="8614" selection-end="8614" vertical-scroll-proportion="-22.346153" vertical-offset="1459" max-vertical-offset="2533">
           <folding>
-            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#7;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#8;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#9;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#10;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#11;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#12;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#13;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#14;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#15;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#td#1;n#tr#16;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#17;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#0;n#tr#20;n#table#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#5;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#10;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/projects/view.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/JobassignsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="50" selection-start="7950" selection-end="7968" vertical-scroll-proportion="-23.076923" vertical-offset="1712" max-vertical-offset="2584">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#2;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1046" column="9" selection-start="47865" selection-end="47865" vertical-scroll-proportion="0.0" vertical-offset="17432" max-vertical-offset="19329">
-          <folding>
-            <marker date="1401781219563" expanded="false" signature="27753:27765" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="27955:27973" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="28120:28138" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="28673:28691" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="28838:28856" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="31853:31864" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="31961:31975" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="35518:35528" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="35575:35588" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="36407:36423" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="36675:36691" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="36898:36914" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="37075:37087" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="37249:37261" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="38040:38052" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="38098:38111" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="38149:38167" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="38201:38219" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="40152:40192" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="40292:40304" placeholder="..." />
-            <marker date="1401781219563" expanded="false" signature="41834:41862" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/PLcss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="411" column="29" selection-start="7520" selection-end="7520" vertical-scroll-proportion="0.4288939" vertical-offset="6607" max-vertical-offset="16490">
+        <state line="253" column="50" selection-start="7941" selection-end="7941" vertical-scroll-proportion="0.44942528" vertical-offset="3910" max-vertical-offset="4896">
           <folding />
         </state>
       </provider>

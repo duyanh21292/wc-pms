@@ -1,5 +1,15 @@
 <script>
     function actionCreateProject(){
+        var date = new Date().getDate();
+        if (date < 10) {
+            date = '0' + date;
+        }
+        var month = (new Date().getMonth()) + 1;
+        if (month < 10) {
+            month = '0' + month;
+        }
+        var year = new Date().getFullYear() + '';
+        var prj_no = year.substring(2) + '' + month + '' + date;
         var project_name = $('[name="project_name"]').val();
         var password = $('[name="password"]').val();
         var division_id = $('[name="biz_division"]').val();
@@ -19,7 +29,7 @@
         $.ajax({
             type: 'POST',
             url: '<?php echo Employees::BASE_URL ?>/projects/createProject',
-            data: {'project_name': project_name, 'password': password, 'division_id': division_id, 'industry_id': industry_id, 'client_id': client_id, 'c_contact_id': c_contact_id, 'c_fcontact_id': c_fcontact_id, 'c_po_no': c_po_no, 'c_pj_no': c_pj_no, 'pj_mng_no': pj_mng_no, 'sales_mng_no': sales_mng_no, 'vat_tax': vat_tax, 'currency_id': currency_id, 'due_date': due_date, 'reg_date': reg_date}
+            data: {'prj_no':prj_no,'project_name': project_name, 'password': password, 'division_id': division_id, 'industry_id': industry_id, 'client_id': client_id, 'c_contact_id': c_contact_id, 'c_fcontact_id': c_fcontact_id, 'c_po_no': c_po_no, 'c_pj_no': c_pj_no, 'pj_mng_no': pj_mng_no, 'sales_mng_no': sales_mng_no, 'vat_tax': vat_tax, 'currency_id': currency_id, 'due_date': due_date, 'reg_date': reg_date}
         }).success(function(msg){
                 if(msg == 1){
                     alert("Create project '"+project_name+"' successful!");

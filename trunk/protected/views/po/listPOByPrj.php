@@ -44,7 +44,7 @@
             </script>
             <div style="float: left;height: 23px;width: 100px;text-align: center;font-size: small;font-weight: normal;padding-top: 7px;background-color: #E7E7E7;color: #616161;font-family: pms-font-bold,Arial,sans-serif;"><?php echo $_GET['prj_no'] ?></div>
             <div id="prj_detail_menu_basic" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL?>/projects/getProjectDetail?prj_no=<?php echo $_GET['prj_no'] ?>')">Basic Info.</div>
-            <div id="prj_detail_menu_spec" class="prj_detail_menu_item">Spec</div>
+            <div id="prj_detail_menu_spec" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL ?>/spec/getProjectSpec?prj_no=<?php echo $_GET['prj_no'] ?> ')">Spec</div>
             <div id="prj_detail_menu_jobassign" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL?>/jobassigns/getAllJobassigns?prj_no=<?php echo $_GET['prj_no'] ?>')">Jobassign</div>
             <div id="prj_detail_menu_po" class="prj_detail_menu_item prj_detail_selected" onclick="goToPage('<?php echo Employees::BASE_URL ?>/po/getAllPrjPo?prj_no=<?php echo $_GET['prj_no'] ?>')">PO</div>
             <div id="prj_detail_menu_invoice" class="prj_detail_menu_item">Invoice</div>
@@ -72,9 +72,12 @@
                     <th>Amount</th>
                     <th>Status</th>
                 </tr>
+                <?php $total_amount_vnd = 0.0000; ?>
+                <?php $paid_amount = 0.0000; ?>
                 <?php foreach($model as $obj):?>
                     <?php
                         $no++;
+                        $total_amount_vnd = $total_amount_vnd + $obj->Amount;
                         $regDate = date("y-m-d", strtotime($obj->RegDate));
                     ?>
                     <tr>
@@ -82,10 +85,19 @@
                         <td style="text-align: center"><div id="po_name_<?php echo $obj->PoNo ?>" class="po_name" onclick="viewPo('<?php echo $obj->PoNo ?>')"><?php echo $obj->PoNo ?></div></td>
                         <td><?php echo $obj->SupplierName ?></td>
                         <td style="text-align: center"><?php echo $regDate ?></td>
-                        <td style="text-align: right">VND <?php echo $obj->Amount ?></td>
+                        <td style="text-align: right">VND <?php echo number_format($obj->Amount,4,".",",");?></td>
                         <td style="text-align: center"><?php echo $obj->Status ?></td>
                     </tr>
                 <?php endforeach ?>
+                <tr style="height: 30px">
+                    <td class="total" colspan="4">Total Amount</td>
+                    <td class="total" style="text-align: right">
+                        <div id="total_amount_usd" class="total">VND <?php echo number_format($total_amount_vnd,4,".",",");?></div>
+                    </td>
+                    <td class="total" style="text-align: right">
+                        <div id="total_amount_usd" class="total">VND <?php echo number_format($paid_amount,4,".",",");?></div>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>

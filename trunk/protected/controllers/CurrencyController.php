@@ -28,7 +28,7 @@ class CurrencyController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getAllCurrencyCb','getAllCurrency'),
+				'actions'=>array('index','view','getAllCurrencyCb','getAllCurrency','getCurrencyNo','getExchange'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -191,5 +191,23 @@ class CurrencyController extends Controller
         $this->render('view',array(
             'model'=>$model,
         ));
+    }
+
+    public function actionGetCurrencyNo(){
+        $cur_no = Yii::app()->request->getParam("cur_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'CurrencyNo=:cur_no';
+        $criteria->params = array(':cur_no'=>$cur_no);
+        $model = Currency::model()->find($criteria);
+        echo $model->Currency_ID;
+    }
+
+    public function actionGetExchange(){
+        $cur_no = Yii::app()->request->getParam("cur_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'CurrencyNo=:cur_no';
+        $criteria->params = array(':cur_no'=>$cur_no);
+        $model = Currency::model()->find($criteria);
+        echo $model->ExchangeVND;
     }
 }

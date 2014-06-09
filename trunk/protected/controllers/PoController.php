@@ -28,7 +28,7 @@ class PoController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getAllPo','createNewPO','createPO','getAllPrjPo','getPoDetail'),
+				'actions'=>array('index','view','getAllPo','createNewPO','createPO','getAllPrjPo','getPoDetail','modifyPo','updatePo','getPrjAmount'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -280,5 +280,74 @@ class PoController extends Controller
         $this->renderPartial('poDetail',array(
             'model'=>$model,
         ));
+    }
+
+    public function actionModifyPo(){
+        $cs = Yii::app()->clientScript;
+        $cs->scriptMap['bootstrap.js'] = false;
+        $cs->scriptMap['bootstrap.css'] = false;
+        $cs->scriptMap['bootstrap-yii.css'] = false;
+
+        $this->layout = '//layouts/ajaxLayout';
+        $po_no = Yii::app()->request->getParam("po_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'PoNo =:po_no';
+        $criteria->params = array(':po_no'=>$po_no);
+        $model = PoInfo::model()->find($criteria);
+        $this->render('modifyPO',array(
+            'model'=>$model,
+        ));
+    }
+
+    public function actionGetPrjAmount(){
+        $prj_no = Yii::app()->request->getParam("prj_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'ProjectNo =:prj_no';
+        $criteria->params = array(':prj_no'=>$prj_no);
+        $model = PrjAmount::model()->find($criteria);
+        $amount = number_format($model->TotalAmount,4,".",",");
+
+        echo $amount;
+    }
+
+    public function actionUpdatePo(){
+        $po_no = Yii::app()->request->getParam("po_no");
+        $project_no = Yii::app()->request->getParam("project_no");
+        $supplier_no = Yii::app()->request->getParam("supplier_no");
+        $s_contact_id = Yii::app()->request->getParam("s_contact_id");
+        $language_pair_id = Yii::app()->request->getParam("language_pair_id");
+        $a_task_id = Yii::app()->request->getParam("a_task_id");
+        $unit_id = Yii::app()->request->getParam("unit_id");
+        $quantity = Yii::app()->request->getParam("quantity");
+        $u_price = Yii::app()->request->getParam("u_price");
+        $currency_id = Yii::app()->request->getParam("currency_id");
+        $file_item = Yii::app()->request->getParam("file_item");
+        $reg_date = Yii::app()->request->getParam("reg_date");
+        $due_date = Yii::app()->request->getParam("due_date");
+        $work_load = Yii::app()->request->getParam("work_load");
+        $delivery_method_id = Yii::app()->request->getParam("delivery_method_id");
+        $comments = Yii::app()->request->getParam("comments");
+
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'PoNo =:po_no';
+        $criteria->params = array(':po_no'=>$po_no);
+        $model = Po::model()->find($criteria);
+        $model->ProjectNo = $project_no;
+        $model->SupplierNo = $supplier_no;
+        $model->SContact_ID = $s_contact_id;
+        $model->Language_Pair_ID = $language_pair_id;
+        $model->ATask_ID = $a_task_id;
+        $model->Unit_ID = $unit_id;
+        $model->Quantity = $quantity;
+        $model->UPrice = $u_price;
+        $model->Currency_ID = $currency_id;
+        $model->FileItem = $file_item;
+        $model->RegDate = $reg_date;
+        $model->DueDate = $due_date;
+        $model->WorkLoad = $work_load;
+        $model->DeliveryMethod_ID = $delivery_method_id;
+        $model->Comments = $comments;
+
+        echo $model->save();
     }
 }

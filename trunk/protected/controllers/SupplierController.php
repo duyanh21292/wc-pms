@@ -28,7 +28,7 @@ class SupplierController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getAllSuppliers','createNewSupplier','createSupplier','getSupplierDetail','modifySupplier','updateSupplier','supplierMailing','getAllSupplierWindow'),
+				'actions'=>array('index','view','getAllSuppliers','createNewSupplier','createSupplier','getSupplierDetail','modifySupplier','updateSupplier','supplierMailing','getAllSupplierWindow','getSupplierLangPairCb','getSupplierTaskCb'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -395,5 +395,45 @@ class SupplierController extends Controller
         $this->renderPartial('supplierChooserWindow',array(
             'model'=>$model,
         ));
+    }
+
+    public function actionGetSupplierLangPairCb(){
+        $supplier_no = Yii::app()->request->getParam("supplier_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'SupplierNo=:supplier_no';
+        $criteria->params = array(':supplier_no'=>$supplier_no);
+        $model = SupplierInfo::model()->find($criteria);
+        $lang_pair_id = $model -> Language_Pair_ID;
+        $lang_pair_name = $model -> Language_Pair_Name;
+        $result = '';
+        if (!empty($lang_pair_id)) {
+            $id_replace = str_replace('-','',$lang_pair_id);
+            $id_split = explode(',',$id_replace);
+            $name_split = array_reverse(explode(',',$lang_pair_name));
+            for ($i = 0 ; $i < count($id_split); $i++) {
+                $result = $result.'<option value='.$id_split[$i].'>'.$name_split[$i].'</option>';
+            }
+        }
+        echo $result;
+    }
+
+    public function actionGetSupplierTaskCb(){
+        $supplier_no = Yii::app()->request->getParam("supplier_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'SupplierNo=:supplier_no';
+        $criteria->params = array(':supplier_no'=>$supplier_no);
+        $model = SupplierInfo::model()->find($criteria);
+        $task_id = $model -> ATask_ID;
+        $task_name = $model -> Task_Name;
+        $result = '';
+        if (!empty($task_id)) {
+            $id_replace = str_replace('-','',$task_id);
+            $id_split = explode(',',$id_replace);
+            $name_split = array_reverse(explode(',',$task_name));
+            for ($i = 0 ; $i < count($id_split); $i++) {
+                $result = $result.'<option value='.$id_split[$i].'>'.$name_split[$i].'</option>';
+            }
+        }
+        echo $result;
     }
 }

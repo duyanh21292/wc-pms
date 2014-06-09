@@ -235,7 +235,7 @@ class SuppliercontactController extends Controller
         $criteria->condition = 'SupplierNo =:supp_no';
         $criteria->params = array(':supp_no'=>$supp_no);
         $model = Suppliercontact::model()->findAll($criteria);
-        $result='<select id="cb_supp_contact" name="supp_contact" style="min-width: 150px">';
+        $result='<select id="cb_supp_contact" name="supp_contact" style="min-width: 150px;margin-left: 5px">';
         foreach($model as $obj) {
             $result = $result.'<option value="'.$obj->Contact_ID.'">'.$obj->Name.'</option>';
         }

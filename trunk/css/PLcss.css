@@ -407,6 +407,22 @@ td.cell_no {
     text-align: right;
     width: 60px;
 }
+td.total{
+    text-align: center;
+    background-color: #FFFBEC
+}
+div.total{
+    font-family: pms-font-bold,Arial,sans-serif;
+    font-size: 14px;
+}
+.num_total_selected{
+    text-align: left;
+    color: #D53F2B;
+}
+.num_total{
+    text-align: right;
+    /*font-size: 14px;*/
+}
 .tool_frame{
     height: auto;
     min-height: 50px;
@@ -642,7 +658,7 @@ button.bt_large:hover{
     float: left;
 }
 
-#detail_job_assign,#detail_basic_info,#detail_list_po,#detail_view_po{
+#detail_job_assign,#detail_basic_info,#detail_list_po,#detail_view_po,#detail_list_spec{
     width: 1014px;
 }
 .frame_title{
@@ -748,7 +764,7 @@ td.value_form_comp{
 td.info_form_comp{
     width: 100px;
 }
-.bt_crud_30,.bt_crud_26 {
+.bt_crud_30,.bt_crud_26,.bt_crud_24 {
     cursor: pointer;
     color: #929292;
 }
@@ -757,6 +773,9 @@ td.info_form_comp{
 }
 .bt_crud_26 {
     font-size: 26px;
+}
+.bt_crud_24 {
+    font-size: 24px;
 }
 .bt_tool_text {
     cursor: pointer;
@@ -801,6 +820,10 @@ td.info_form_comp{
     color: #e16b20;
     border-color: #e16b20;
 }
+.tool_text_extract:hover{
+    color: #594ED5;
+    border-color: #594ED5;
+}
 .tool_text{
     float: left;
     margin-top: 5px;
@@ -826,7 +849,7 @@ td.info_form_comp{
     -webkit-transition:color .2s ease-in
 }
 
-.modify,.delete,.create,.accept,.cancel,.email,.copy{
+.modify,.delete,.create,.accept,.cancel,.email,.copy,.view{
     color: #929292;
     -webkit-transition:color .2s ease-in
 }
@@ -834,15 +857,10 @@ td.info_form_comp{
     margin-top: -2px;
     position: absolute;
 }
-.emp_icon:hover{
+.emp_icon:hover,.view:hover,.emp_email:hover,.log_out:hover{
     color: #4a4a4a;
 }
-.emp_email:hover{
-    color: #4a4a4a;
-}
-.log_out:hover{
-    color: #4a4a4a;
-}
+
 .modify:hover{
     color: #4691cb;
 }

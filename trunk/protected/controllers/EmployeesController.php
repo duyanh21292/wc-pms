@@ -315,7 +315,6 @@ class EmployeesController extends Controller
     }
 
     public function actionGetAllEmpWindow(){
-        $element_id = Yii::app()->request->getParam("id");
         $result='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -326,9 +325,9 @@ class EmployeesController extends Controller
             <script type="text/javascript"  src="../../../scripts/PL-javascript.js"></script>
             <script type="text/javascript">
             function selectEmp(no,name) {
-                window.opener.document.getElementById("'.$element_id.'").innerHTML=name;
-                window.opener.document.getElementById("'.$element_id.'").value=name;
-                window.opener.document.getElementById("'.$element_id.'").setAttribute("empNo",no);
+                window.opener.document.getElementById("emp_selected_name").innerHTML=name;
+                window.opener.document.getElementById("emp_selected_name").value=name;
+                window.opener.document.getElementById("emp_selected_name").setAttribute("empNo",no);
                 self.close();
             }
             </script>

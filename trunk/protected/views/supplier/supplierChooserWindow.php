@@ -10,45 +10,56 @@
         function selectSupplier(no,name,type,lang_pair_id,lang_pair_name,a_task_id,a_task_name) {
             var lang_pair_child = '';
             var a_task_child = '';
-            if (!jQuery.isEmptyObject(lang_pair_id)) {
-                var array_id = lang_pair_id.replace(/-/g,"").split(',');
-                var array_name = lang_pair_name.split(',');
-                for (var i = 0; i < array_id.length ; i ++) {
-                    lang_pair_child += '<option value = "'+ array_id[i] +'">' + array_name[i] + '</option>';
-                }
-            } else {
+//            if (!jQuery.isEmptyObject(lang_pair_id)) {
+//                var array_id = lang_pair_id.replace(/-/g,'').split(',');
+//                var array_name = lang_pair_name.split(',');
+//                for (var i = 0; i < array_id.length ; i ++) {
+//                    lang_pair_child += '<option value = "'+ array_id[i] +'">' + array_name[i] + '</option>';
+//                }
+//            } else {
+//
+//            }
 
-            }
-
-            if (!jQuery.isEmptyObject(a_task_id)) {
-                var array_id = a_task_id.replace(/-/g,"").split(',');
-                var array_name = a_task_name.split(',');
-                for (var i = 0; i < array_id.length ; i ++) {
-                    a_task_child += '<option value = "'+ array_id[i] +'">' + array_name[i] + '</option>';
-                }
-            } else {
-
-            }
-
-            window.opener.document.getElementById("cb_lang_pair").disabled = false;
-            window.opener.document.getElementById("cb_lang_pair").innerHTML = lang_pair_child;
-            window.opener.document.getElementById("cb_a_task").disabled = false;
-            window.opener.document.getElementById("cb_a_task").innerHTML = a_task_child;
-            if(type == 1){
-                $.ajax({
-                    type: 'GET',
-                    url: '<?php echo(Employees::BASE_URL) ?>/suppliercontact/getSuppContactCb',
-                    data: {'supp_no' : no}
-                }).success(function(data){
-                    window.opener.document.getElementById("supplier_selected_name").innerHTML= name + '&nbsp;' + data;
-                    window.opener.document.getElementById("supplier_selected_name").setAttribute("suppno",no);
-                    self.close();
-                });
-            } else {
-                window.opener.document.getElementById("supplier_selected_name").innerHTML= name;
-                window.opener.document.getElementById("supplier_selected_name").setAttribute("suppno",no);
-                self.close();
-            }
+//            if (!jQuery.isEmptyObject(a_task_id)) {
+//                var array_id = a_task_id.replace(/-/g,"").split(',');
+//                var array_name = a_task_name.split(',');
+//                for (var i = 0; i < array_id.length ; i ++) {
+//                    a_task_child += '<option value = "'+ array_id[i] +'">' + array_name[i] + '</option>';
+//                }
+//            } else {
+//
+//            }
+            $.ajax({
+                type: 'GET',
+                url: '<?php echo Employees::BASE_URL?>/supplier/getSupplierLangPairCb',
+                data: {'supplier_no': no}
+            }).success(function(data){
+                    window.opener.document.getElementById("cb_lang_pair").disabled = false;
+                    window.opener.document.getElementById("cb_lang_pair").innerHTML = data;
+                    $.ajax({
+                        type: 'GET',
+                        url: '<?php echo Employees::BASE_URL?>/supplier/getSupplierTaskCb',
+                        data: {'supplier_no': no}
+                    }).success(function(data){
+                            window.opener.document.getElementById("cb_a_task").disabled = false;
+                            window.opener.document.getElementById("cb_a_task").innerHTML = data;
+                            if(type == 1){
+                                $.ajax({
+                                    type: 'GET',
+                                    url: '<?php echo(Employees::BASE_URL) ?>/suppliercontact/getSuppContactCb',
+                                    data: {'supp_no' : no}
+                                }).success(function(data){
+                                        window.opener.document.getElementById("supplier_selected_name").innerHTML= name + data;
+                                        window.opener.document.getElementById("supplier_selected_name").setAttribute("suppno",no);
+                                        self.close();
+                                    });
+                            } else {
+                                window.opener.document.getElementById("supplier_selected_name").innerHTML= name;
+                                window.opener.document.getElementById("supplier_selected_name").setAttribute("suppno",no);
+                                self.close();
+                            }
+                        });
+            });
         }
     </script>
 </head>

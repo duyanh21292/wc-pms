@@ -26,7 +26,7 @@
             </script>
             <div style="float: left;height: 23px;width: 100px;text-align: center;font-size: small;font-weight: normal;padding-top: 7px;background-color: #E7E7E7;color: #616161;font-family: pms-font-bold,Arial,sans-serif;"><?php echo $_GET['prj_no'] ?></div>
             <div id="prj_detail_menu_basic" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL?>/projects/getProjectDetail?prj_no=<?php echo $_GET['prj_no'] ?>')">Basic Info.</div>
-            <div id="prj_detail_menu_spec" class="prj_detail_menu_item">Spec</div>
+            <div id="prj_detail_menu_spec" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL ?>/spec/getProjectSpec?prj_no=<?php echo $_GET['prj_no'] ?> ')">Spec</div>
             <div id="prj_detail_menu_jobassign" class="prj_detail_menu_item prj_detail_selected" onclick="goToPage('<?php echo Employees::BASE_URL?>/jobassigns/getAllJobassigns?prj_no=<?php echo $_GET['prj_no'] ?>')">Jobassign</div>
             <div id="prj_detail_menu_po" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL ?>/po/getAllPrjPo?prj_no=<?php echo $_GET['prj_no'] ?>')">PO</div>
             <div id="prj_detail_menu_invoice" class="prj_detail_menu_item">Invoice</div>
@@ -55,7 +55,7 @@
                     $stDate = date("y-m-d", strtotime($obj->StartDate));
                     $endDate = date("y-m-d", strtotime($obj->EndDate));
                     ?>
-                    <tr>
+                    <tr class="job_assign">
                         <td><?php echo $obj->Full_Name ?></td>
                         <td><?php echo $obj->TaskName ?> > <?php echo $obj->ActivitiesName ?></td>
                         <td style="text-align: center"><?php echo $obj->Unit ?></td>
@@ -63,7 +63,13 @@
                         <td style="text-align: center"><?php echo $stDate ?> ~ <?php echo $endDate ?></td>
                         <td style="text-align: center"><?php echo $obj->AssignedHour?></td>
                         <td style="text-align: center"><?php echo $obj->Status ?></td>
-                        <td><?php echo $obj->Comment ?></td>
+                        <td style="text-align: center">
+                            <?php if(!empty($obj->Comment)):?>
+                                <div class="icon ion-ios7-eye bt_crud_26 view"></div>
+                            <?php else:?>
+                                No Comment
+                            <?php endif ?>
+                        </td>
                         <td style="text-align:center"><input type="checkbox" name="lqa_<?php echo $obj->JobAssign_ID ?>"></td>
                     </tr>
                 <?php endforeach ?>
