@@ -1089,6 +1089,7 @@ function addCommas(nStr)
     return x1 + x2;
 }
 
+
 $(document).ready(function() {
     $(".nav li").hover(function() {
         $(this).addClass('hover');
