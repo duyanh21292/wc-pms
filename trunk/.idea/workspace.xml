@@ -61,10 +61,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protected/views/projects/view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="152" column="17" selection-start="8697" selection-end="8697" vertical-scroll-proportion="-30.26923" vertical-offset="1797" max-vertical-offset="2720">
+                <state line="141" column="52" selection-start="8362" selection-end="8368" vertical-scroll-proportion="0.6880734" vertical-offset="1797" max-vertical-offset="2720">
                   <folding>
                     <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#tr#2;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -88,10 +88,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PL-javascript.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="PL-javascript.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1102" column="7" selection-start="46403" selection-end="46403" vertical-scroll-proportion="0.8296214" vertical-offset="17377" max-vertical-offset="18275">
+                <state line="502" column="30" selection-start="22483" selection-end="22483" vertical-scroll-proportion="0.0" vertical-offset="7793" max-vertical-offset="18275">
                   <folding>
                     <element signature="n#!!block;n#showAllTimetrackByEmp#0" expanded="false" />
                     <marker date="1402284705785" expanded="true" signature="28794:28806" placeholder="..." />
@@ -139,10 +139,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ProjectsController.php" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="ProjectsController.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="374" column="17" selection-start="13549" selection-end="13549" vertical-scroll-proportion="0.73795533" vertical-offset="5730" max-vertical-offset="8738">
+                <state line="367" column="58" selection-start="13298" selection-end="13298" vertical-scroll-proportion="0.65804935" vertical-offset="5679" max-vertical-offset="8738">
                   <folding />
                 </state>
               </provider>
@@ -226,9 +226,9 @@
         <option value="$PROJECT_DIR$/protected/controllers/PoController.php" />
         <option value="$PROJECT_DIR$/protected/views/projects/projectDetail.php" />
         <option value="$PROJECT_DIR$/protected/controllers/JobassignsController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ProjectsController.php" />
-        <option value="$PROJECT_DIR$/protected/views/projects/view.php" />
         <option value="$PROJECT_DIR$/scripts/PL-javascript.js" />
+        <option value="$PROJECT_DIR$/protected/views/projects/view.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ProjectsController.php" />
       </list>
     </option>
   </component>
@@ -941,16 +941,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
+    <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="374" column="17" selection-start="13549" selection-end="13549" vertical-scroll-proportion="0.73795533" vertical-offset="5730" max-vertical-offset="8738">
-          <folding />
+        <state line="502" column="30" selection-start="22483" selection-end="22483" vertical-scroll-proportion="0.0" vertical-offset="7793" max-vertical-offset="18275">
+          <folding>
+            <element signature="n#!!block;n#showAllTimetrackByEmp#0" expanded="false" />
+            <marker date="1402284705785" expanded="true" signature="28794:28806" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="28996:29014" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="29161:29179" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="29714:29732" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="29879:29897" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="32894:32905" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="33002:33016" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="36681:36721" placeholder="..." />
+            <marker date="1402284705785" expanded="true" signature="36821:36833" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/projects/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="17" selection-start="8697" selection-end="8697" vertical-scroll-proportion="-30.26923" vertical-offset="1797" max-vertical-offset="2720">
+        <state line="141" column="52" selection-start="8362" selection-end="8368" vertical-scroll-proportion="0.6880734" vertical-offset="1797" max-vertical-offset="2720">
           <folding>
             <element signature="n#style#0;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#2;n#table#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -973,21 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/PL-javascript.js">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1102" column="7" selection-start="46403" selection-end="46403" vertical-scroll-proportion="0.8296214" vertical-offset="17377" max-vertical-offset="18275">
-          <folding>
-            <element signature="n#!!block;n#showAllTimetrackByEmp#0" expanded="false" />
-            <marker date="1402284705785" expanded="true" signature="28794:28806" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="28996:29014" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="29161:29179" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="29714:29732" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="29879:29897" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="32894:32905" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="33002:33016" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="36681:36721" placeholder="..." />
-            <marker date="1402284705785" expanded="true" signature="36821:36833" placeholder="..." />
-          </folding>
+        <state line="367" column="58" selection-start="13298" selection-end="13298" vertical-scroll-proportion="0.65804935" vertical-offset="5679" max-vertical-offset="8738">
+          <folding />
         </state>
       </provider>
     </entry>

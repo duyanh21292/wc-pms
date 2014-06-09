@@ -139,7 +139,7 @@
             <tr class="tr_data" style="height: 30px">
                 <td class="total" colspan="3">Total</td>
                 <td class="total">
-                    <div class="num_total_selected">0</div>
+                    <div class="num_total_selected">0.0000</div>
                     <div class="num_total"><?php echo number_format($total,4,".",",")?> VND</div>
                 </td>
                 <td class="total" colspan="3"></td>
