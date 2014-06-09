@@ -3,6 +3,7 @@
     setNavSelectedValue('<?php echo $_GET['status_id'] ?>');
     initFrameNumberPage();
 </script>
+
 <?php $no = 0;?>
 <div class="content">
     <div class="content_title"> + Project Management</div>
@@ -128,7 +129,8 @@
                     </td>
                     <td style="width: 250px;text-align: center"><?php echo $obj->ClientName ?>
                         <div style="font-family: pms-font-regular, Arial, sans-serif;"><?php echo $obj->ContactName ?></div></td>
-                    <td class="cell_no" style="width: 200px"><div style="float: left"><input name="select_budget" type="checkbox" value="<?php echo $obj->Budget?>"></div><?php $total = $total + ((int)$obj->Budget); echo $obj->Budget ?> VND</td>
+                    <td class="cell_no" style="width: 200px">
+                        <div style="float: left"><input name="select_budget" type="checkbox" value="<?php echo $obj->Budget?>"></div><?php $total = $total + ((int)$obj->Budget); echo number_format($obj->Budget,4,".",",") ?> VND</td>
                     <td class="cell_no" style="width: 100px">0</td>
                     <td style="text-align: center;width: 95px"><?php echo $obj->Status ?><br><?php echo $obj->FStatus ?></td>
                     <td style="text-align: center;width: 80px"><?php $regDate = date("y-m-d", strtotime($obj->RegDate)); echo $regDate ?><br><?php  $dueDate = date("y-m-d", strtotime($obj->DueDate)); echo $dueDate ?></td>
@@ -138,7 +140,7 @@
                 <td class="total" colspan="3">Total</td>
                 <td class="total">
                     <div class="num_total_selected">0</div>
-                    <div class="num_total"><?php echo $total?> VND</div>
+                    <div class="num_total"><?php echo number_format($total,4,".",",")?> VND</div>
                 </td>
                 <td class="total" colspan="3"></td>
             </tr>
@@ -147,13 +149,7 @@
 
         </div>
         <script>
-            $('[name="select_budget"]').click(function(){
-                var total_selected = 0;
-                $('[name="select_budget"]:checked').each(function(){
-                    total_selected = total_selected + parseInt($(this).val());
-                });
-                $('.num_total_selected').text(total_selected);
-            })
+            budgetSelected();
         </script>
     </div>
 </div>
