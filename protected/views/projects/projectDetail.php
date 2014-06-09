@@ -13,12 +13,11 @@
             });
     </script>
     <div id="detail_content_main" class="content_main">
-        <?php foreach($model as $obj):?>
             <div class="detail_menu_frame">
-                <div id="detail_prj_name"><?php echo $obj->ProjectName ?></div>
+                <div id="detail_prj_name"><?php echo $model->ProjectName ?></div>
                 <div style="float: left;height: 23px;width: 100px;text-align: center;font-size: small;font-weight: normal;padding-top: 7px;background-color: #E7E7E7;color: #616161;font-family: pms-font-bold,Arial,sans-serif;"><?php echo $_GET['prj_no'] ?></div>
                 <div id="prj_detail_menu_basic" class="prj_detail_menu_item prj_detail_selected" onclick="goToPage('<?php echo Employees::BASE_URL?>/projects/getProjectDetail?prj_no=<?php echo $_GET['prj_no'] ?>')">Basic Info.</div>
-                <div id="prj_detail_menu_spec" class="prj_detail_menu_item">Spec</div>
+                <div id="prj_detail_menu_spec" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL ?>/spec/getProjectSpec?prj_no=<?php echo $_GET['prj_no'] ?> ')">Spec</div>
                 <div id="prj_detail_menu_jobassign" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL?>/jobassigns/getAllJobassigns?prj_no=<?php echo $_GET['prj_no'] ?>')">Jobassign</div>
                 <div id="prj_detail_menu_po" class="prj_detail_menu_item" onclick="goToPage('<?php echo Employees::BASE_URL ?>/po/getAllPrjPo?prj_no=<?php echo $_GET['prj_no'] ?>')">PO</div>
                 <div id="prj_detail_menu_invoice" class="prj_detail_menu_item">Invoice</div>
@@ -42,55 +41,55 @@
                                     $('#cb_prj_status').html(data);
                                     $('#cb_prj_status').children().each(function(){
                                         var val = $(this).val();
-                                        if (val == <?php echo "'".$obj->Status."'" ?>){
+                                        if (val == <?php echo "'".$model->Status_ID."'" ?>){
                                             $(this).attr('selected',true);
                                         }
                                     });
                                 });
                         </script>
                         <td class="prj_detail">Finance Status</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->FStatus ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->FStatus ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Biz. Division</td>
-                        <td class="prj_detail value_prj_detail" colspan="3"><?php echo $obj->DivisionName ?></td>
+                        <td class="prj_detail value_prj_detail" colspan="3"><?php echo $model->DivisionName ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Reg.Date</td>
-                        <td class="prj_detail value_prj_detail"><?php $regDate = date("Y-m-d", strtotime($obj->RegDate)); echo $regDate ?></td>
+                        <td class="prj_detail value_prj_detail"><?php $regDate = date("Y-m-d", strtotime($model->RegDate)); echo $regDate ?></td>
                         <td class="prj_detail">Due Date</td>
-                        <td class="prj_detail value_prj_detail"><?php $dueDate = date("Y-m-d", strtotime($obj->DueDate)); echo $dueDate ?></td>
+                        <td class="prj_detail value_prj_detail"><?php $dueDate = date("Y-m-d", strtotime($model->DueDate)); echo $dueDate ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Sales Manager</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->SaleManagerName ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->SaleManagerName ?></td>
                         <td class="prj_detail">Project Manager</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->ProjectManagerName ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->ProjectManagerName ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Industry</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->IndustryName ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->IndustryName ?></td>
                         <td class="prj_detail">Password</td>
-                        <td class="prj_detail value_prj_detail"><input type="password" value="<?php echo $obj->Password ?>" disabled></td>
+                        <td class="prj_detail value_prj_detail"><input type="password" value="<?php echo $model->Password ?>" disabled></td>
                     </tr>
                     <tr>
                         <td style="background-color: transparent;border: none" colspan="4"></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Client</td>
-                        <td class="prj_detail value_prj_detail" colspan="3"><?php echo $obj->ClientName ?></td>
+                        <td class="prj_detail value_prj_detail" colspan="3"><?php echo $model->ClientName ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">C - Contact</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->ContactName ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->ContactName ?></td>
                         <td class="prj_detail">C - F.Contact</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->FContactName ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->FContactName ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">C - PO No.</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->C_PoNo ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->C_PoNo ?></td>
                         <td class="prj_detail">C - Project No.</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->C_ProjectNo ?></td>
+                        <td class="prj_detail value_prj_detail"><?php echo $model->C_ProjectNo ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">View Po</td>
@@ -101,25 +100,25 @@
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Internal Cost</td>
-                        <td class="prj_detail value_prj_detail">VND <?php echo $obj->InternalCost ?></td>
+                        <td class="prj_detail value_prj_detail">VND <?php $internal_cost = number_format($model->InternalCost,4,".",","); echo $internal_cost ?></td>
                         <td class="prj_detail">VAT/TAX</td>
-                        <td class="prj_detail value_prj_detail"><?php echo $obj->VATTAX ?>%</td>
+                        <td class="prj_detail value_prj_detail"><?php echo number_format($model->VATTAX,4,".",",") ?> %</td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Buy-Ins Amount</td>
-                        <td class="prj_detail value_prj_detail">VND <?php echo $obj->BuyInsAmount ?></td>
+                        <td id="prj_buy_ins_amount" class="prj_detail value_prj_detail">VND <?php echo number_format($model->BuyInsAmount,4,".",",") ?></td>
                         <td class="prj_detail">Balance</td>
-                        <td class="prj_detail value_prj_detail">VND <?php echo $obj->Balance ?></td>
+                        <td id="prj_balance" class="prj_detail value_prj_detail">VND <?php echo number_format($model->Balance,4,".",",") ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">Amount</td>
-                        <td class="prj_detail value_prj_detail">VND <?php echo $obj->Amount ?></td>
+                        <td id="prj_amount" class="prj_detail value_prj_detail">VND <?php echo number_format($model->Amount,4,".",",") ?></td>
                         <td class="prj_detail">Gross Margin</td>
-                        <td class="prj_detail value_prj_detail">VND <?php echo $obj->GrossMargin ?></td>
+                        <td class="prj_detail value_prj_detail">VND <?php echo number_format($model->GrossMargin,4,".",",") ?></td>
                     </tr>
                     <tr class="prj_detail">
                         <td class="prj_detail">View Quote</td>
-                        <td class="prj_detail value_prj_detail" colspan="3"></td>
+                        <td class="prj_detail value_prj_detail" colspan="3"><?php echo $model->QuoteFile ?></td>
                     </tr>
                 </table>
             </div>
@@ -141,6 +140,5 @@
                     <div class="tool_text">Upload PO</div>
                 </div>
             </div>
-        <?php endforeach ?>
     </div>
 </div>

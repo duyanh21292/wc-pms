@@ -172,6 +172,7 @@ class ProjectsController extends Controller
 	}
 
     public function actionCreateProject(){
+        $prj_no = Yii::app()->request->getParam("prj_no");
         $project_name = Yii::app()->request->getParam("project_name");
         $password = Yii::app()->request->getParam("password");
         $division_id = Yii::app()->request->getParam("division_id");
@@ -188,22 +189,27 @@ class ProjectsController extends Controller
         $due_date = Yii::app()->request->getParam("due_date");
         $reg_date = Yii::app()->request->getParam("reg_date");
 
-        $all_project = Projects::model()->findAll();
+        $no = 'VN-'.$prj_no;
+
+        $criteria = new CDbCriteria();
+        $criteria->select='max(ProjectNo) as maxProjectNo';
+        $criteria->condition = 'ProjectNo LIKE :prj_no';
+        $criteria->params = array(':prj_no'=>'%'.$no.'%');
+        $all_project = Projects::model()->find($criteria);
         $count = count($all_project);
-        $prj_no = '';
-        for ($i = 1; $i < 8;$i++) {
-            $j = 8 - strlen((string) ($count + 1));
+
+
+        for ($i = 1; $i < 4;$i++) {
+            $j = 4 - strlen((string) ($count + 1));
             if($i == $j){
-                $prj_no = $prj_no.($count + 1);
+                $no = $no.($count + 1);
                 break;
             }
-            $prj_no = $prj_no.'0';
+            $no = $no.'0';
         }
 
-        $prj_no = 'VN-'.$prj_no;
-
         $model = new Projects();
-        $model->ProjectNo = $prj_no;
+        $model->ProjectNo = $no;
         $model->SaleManagerNo = $sales_mng_no;
         $model->ProjectManagerNo = $pj_mng_no;
         $model->ProjectName = $project_name;
@@ -274,7 +280,7 @@ class ProjectsController extends Controller
         $criteria->condition = 'ProjectNo=:prj_no';
         $criteria->params = array(':prj_no'=>$prj_no);
 
-        $model = ProjectsInfo::model()->findAll($criteria);
+        $model = PrjDetail::model()->find($criteria);
         $this->render('projectDetail',array(
             'model'=>$model,
         ));
@@ -311,8 +317,8 @@ class ProjectsController extends Controller
         $status_id = Yii::app()->request->getParam("status_id");
         $f_status_id = Yii::app()->request->getParam("f_status_id");
         $industry_id = Yii::app()->request->getParam("industry_id");
-//        $reg_date_from = Yii::app()->request->getParam("reg_date_from");
-//        $reg_date_to = Yii::app()->request->getParam("reg_date_to");
+        $reg_date_from = Yii::app()->request->getParam("reg_date_from");
+        $reg_date_to = Yii::app()->request->getParam("reg_date_to");
 
         $row_start = (0 + (20*($page-1)));
 
@@ -327,17 +333,19 @@ class ProjectsController extends Controller
             $industry_id = '%%';
         }
         if (empty($search_type)){
-            $criteria->condition = 'Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
-            $criteria->params = array(':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+            $criteria->condition = 'Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id AND RegDate >= :reg_date_from AND RegDate <= :reg_date_to';
+            $criteria->params = array(':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id,':reg_date_from'=>$reg_date_from,':reg_date_to'=>$reg_date_to);
         } else {
-            $criteria->condition = $search_type.' LIKE :search_content AND Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
-            $criteria->params = array(':search_content'=>'%'.$search_content.'%',':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+            $criteria->condition = $search_type.' LIKE :search_content AND Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id AND RegDate >= :reg_date_from AND RegDate <= :reg_date_to';
+            $criteria->params = array(':search_content'=>'%'.$search_content.'%',':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id,':reg_date_from'=>$reg_date_from,':reg_date_to'=>$reg_date_to);
         }
         $criteria->limit = 20;
         $criteria->offset = $row_start;
         $model = ProjectsInfo::model()->findAll($criteria);
+        $total = 0;
         foreach ($model as $object) {
             $row_start++;
+            $total = $total + $object->Budget;
             $regDate = date("y-m-d", strtotime($object->RegDate));
             $dueDate = date("y-m-d", strtotime($object->DueDate));
             $result = $result.'<tr class="tr_data">
@@ -348,12 +356,20 @@ class ProjectsController extends Controller
                     </td>
                     <td style="width: 250px;text-align: center">'.$object->ClientName.'
                         <div style="font-family: pms-font-regular, Arial, sans-serif;">'.$object->ContactName.'</div></td>
-                    <td class="cell_no" style="width: 200px">'.$object->Budget .' VND</td>
+                    <td class="cell_no" style="width: 200px"><div style="float: left"><input name="select_budget" type="checkbox" value="'.$object->Budget.'"></div>'.$object->Budget .' VND</td>
                     <td class="cell_no" style="width: 100px">0</td>
                     <td style="text-align: center;width: 95px">'.$object->Status .'<br>'.$object->FStatus .'</td>
                     <td style="text-align: center;width: 80px">'.$regDate .'<br>'.$dueDate.'</td>
                 </tr>';
         }
+        $result = $result.'<tr class="tr_data" style="height: 30px">
+                <td class="total" colspan="3">Total</td>
+                <td class="total">
+                    <div class="num_total_selected">0</div>
+                    <div class="num_total">'.$total.' VND</div>
+                </td>
+                <td class="total" colspan="3"></td>
+            </tr>';
         echo $result;
     }
 
@@ -363,8 +379,8 @@ class ProjectsController extends Controller
         $status_id = Yii::app()->request->getParam("status_id");
         $f_status_id = Yii::app()->request->getParam("f_status_id");
         $industry_id = Yii::app()->request->getParam("industry_id");
-//        $reg_date_from = Yii::app()->request->getParam("reg_date_from");
-//        $reg_date_to = Yii::app()->request->getParam("reg_date_to");
+        $reg_date_from = Yii::app()->request->getParam("reg_date_from");
+        $reg_date_to = Yii::app()->request->getParam("reg_date_to");
 
         $criteria = new CDbCriteria();
         if(empty($status_id)){
@@ -376,13 +392,24 @@ class ProjectsController extends Controller
         if (empty($industry_id)){
             $industry_id = '%%';
         }
-        if (empty($search_type)){
-            $criteria->condition = 'Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
-            $criteria->params = array(':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+        if (!empty($reg_date_to) && !empty($reg_date_from)) {
+            if (empty($search_type)){
+                $criteria->condition = 'Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id AND RegDate >= :reg_date_from AND RegDate <= :reg_date_to';
+                $criteria->params = array(':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id,':reg_date_from'=>$reg_date_from,':reg_date_to'=>$reg_date_to);
+            } else {
+                $criteria->condition = $search_type.' LIKE :search_content AND Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id AND RegDate >= :reg_date_from AND RegDate <= :reg_date_to';
+                $criteria->params = array(':search_content'=>'%'.$search_content.'%',':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id,':reg_date_from'=>$reg_date_from,':reg_date_to'=>$reg_date_to);
+            }
         } else {
-            $criteria->condition = $search_type.' LIKE :search_content AND Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
-            $criteria->params = array(':search_content'=>'%'.$search_content.'%',':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+            if (empty($search_type)){
+                $criteria->condition = 'Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
+                $criteria->params = array(':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+            } else {
+                $criteria->condition = $search_type.' LIKE :search_content AND Status_ID LIKE :status_id AND FStatus_ID LIKE :f_status_id AND Industry_ID LIKE :industry_id';
+                $criteria->params = array(':search_content'=>'%'.$search_content.'%',':status_id'=>$status_id,':f_status_id'=>$f_status_id,':industry_id'=>$industry_id);
+            }
         }
+
         $all_prj = ProjectsInfo::model()->findAll($criteria);
         $count = count($all_prj);
         $x = $count/20;

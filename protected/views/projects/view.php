@@ -26,7 +26,6 @@
                         }
                     });
                 }
-//                navSelectedListener();
             });
     </script>
     <div id="list_project_content" class="content_main visible">
@@ -53,7 +52,7 @@
                         <select id="cb_year_from" name="year_from"></select> / <select id="cb_month_from" name="month_from"></select> / <select id="cb_day_from" name="day_from"></select>
                         ~ <select id="cb_year_to" name="year_to"></select> / <select id="cb_month_to" name="month_to"></select> / <select id="cb_day_to" name="day_to"></select>
                     </td>
-                    <td class="search_condition">MyProject</td>
+                    <td class="search_condition">My Project</td>
                     <td class="search_condition value_search_condition">
                         PM <input type="checkbox" name="PM_filter" value="PM"> or AM <input type="checkbox" name="AM_filter" value="AM">
                     </td>
@@ -78,6 +77,10 @@
                                 <div class="icon ion-ios7-plus-empty icon_tool_text"></div>
                                 <div class="tool_text">New Project</div>
                             </div>
+                            <div class="bt_tool_text tool_text_extract"  onclick="" style="margin-left: 10px">
+                                <div class="icon ion-ios7-filing-outline icon_tool_text"></div>
+                                <div class="tool_text">Extract</div>
+                            </div>
                         </div>
                     </td>
                 </tr>
@@ -98,9 +101,9 @@
                     });
                 $('#cb_year_from').html(getYearCbData(new Date().getFullYear()));
                 $('#cb_year_to').html(getYearCbData(new Date().getFullYear()));
-                $('#cb_month_from').html(getMonthCbData(new Date().getMonth()));
+                $('#cb_month_from').html(getMonthCbData(0));
                 $('#cb_month_to').html(getMonthCbData(new Date().getMonth()));
-                $('#cb_day_from').html(getDayCbData(new Date().getDate()));
+                $('#cb_day_from').html(getDayCbData(1));
                 $('#cb_day_to').html(getDayCbData(new Date().getDate()));
             </script>
         </div>
@@ -114,6 +117,7 @@
                 <th>Status /<br>F.Status</th>
                 <th>Reg.Date /<br>Due Date</th>
             </tr>
+            <?php $total= 0;?>
             <?php foreach($model as $obj):?>
                 <?php $no++;?>
                 <tr class="tr_data">
@@ -124,19 +128,32 @@
                     </td>
                     <td style="width: 250px;text-align: center"><?php echo $obj->ClientName ?>
                         <div style="font-family: pms-font-regular, Arial, sans-serif;"><?php echo $obj->ContactName ?></div></td>
-                    <td class="cell_no" style="width: 200px"><?php echo $obj->Budget ?> VND</td>
+                    <td class="cell_no" style="width: 200px"><div style="float: left"><input name="select_budget" type="checkbox" value="<?php echo $obj->Budget?>"></div><?php $total = $total + ((int)$obj->Budget); echo $obj->Budget ?> VND</td>
                     <td class="cell_no" style="width: 100px">0</td>
                     <td style="text-align: center;width: 95px"><?php echo $obj->Status ?><br><?php echo $obj->FStatus ?></td>
                     <td style="text-align: center;width: 80px"><?php $regDate = date("y-m-d", strtotime($obj->RegDate)); echo $regDate ?><br><?php  $dueDate = date("y-m-d", strtotime($obj->DueDate)); echo $dueDate ?></td>
                 </tr>
             <?php endforeach ?>
-            <tr class="tr_data">
-                <td colspan="3" style="text-align: center">Total</td>
-                <td style="text-align: center">Total</td>
+            <tr class="tr_data" style="height: 30px">
+                <td class="total" colspan="3">Total</td>
+                <td class="total">
+                    <div class="num_total_selected">0</div>
+                    <div class="num_total"><?php echo $total?> VND</div>
+                </td>
+                <td class="total" colspan="3"></td>
             </tr>
         </table>
         <div class="frame_page_number">
 
         </div>
+        <script>
+            $('[name="select_budget"]').click(function(){
+                var total_selected = 0;
+                $('[name="select_budget"]:checked').each(function(){
+                    total_selected = total_selected + parseInt($(this).val());
+                });
+                $('.num_total_selected').text(total_selected);
+            })
+        </script>
     </div>
 </div>

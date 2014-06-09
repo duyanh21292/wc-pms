@@ -407,16 +407,18 @@ function reloadFrameNumberPage(urlInitPage,urlDataResult,tableId){
     } else if (pageType == PROJECT) {
         var f_status_id = $('[name="f_status_filter"]').val();
         var industry_id = $('[name="industry_filter"]').val();
+        var reg_date_from = $('[name="year_from"]').val() + '-' + $('[name="month_from"]').val() + '-' + $('[name="day_from"]').val();
+        var reg_date_to = $('[name="year_to"]').val() + '-' + $('[name="month_to"]').val() + '-' + $('[name="day_to"]').val();
         $.ajax({
             type: 'GET',
             url: urlInitPage,
-            data: {'search_type':searchType,'search_content':searchContent,'f_status_id':f_status_id,'industry_id':industry_id,'status_id':nav_selected_val}
+            data: {'search_type':searchType,'search_content':searchContent,'f_status_id':f_status_id,'industry_id':industry_id,'status_id':nav_selected_val,}
         }).success(function(data){
                 $('.frame_page_number').html('');
                 $('.frame_page_number').append(data);
                 nextPage(urlDataResult,tableId);
                 prevPage(urlDataResult,tableId);
-                getProjectDataFilter(urlDataResult,tableId,f_status_id,industry_id);
+                getProjectDataFilter(urlDataResult,tableId,f_status_id,industry_id,reg_date_from,reg_date_to);
             });
     }
 }
@@ -481,10 +483,12 @@ function actionSearch(){
         tableId = 'projects_list';
         var f_status_id = $('[name="f_status_filter"]').val();
         var industry_id = $('[name="industry_filter"]').val();
+        var reg_date_from = $('[name="year_from"]').val() + '-' + $('[name="month_from"]').val() + '-' + $('[name="day_from"]').val();
+        var reg_date_to = $('[name="year_to"]').val() + '-' + $('[name="month_to"]').val() + '-' + $('[name="day_to"]').val();
         $.ajax({
             type: 'GET',
             url: urlDataResult,
-            data: {'page': '1','search_type':searchType,'search_content':searchContent,'f_status_id':f_status_id,'industry_id':industry_id,'status_id':nav_selected_val}
+            data: {'page': '1','search_type':searchType,'search_content':searchContent,'f_status_id':f_status_id,'industry_id':industry_id,'status_id':nav_selected_val,'reg_date_from':reg_date_from,'reg_date_to':reg_date_to}
         }).success(function(data){
                 setCurPage(1);
                 $('.tr_data').remove();
@@ -494,7 +498,7 @@ function actionSearch(){
     }
 }
 
-function getProjectDataFilter(urlDataResult,table_list_id,f_status_id,industry_id){
+function getProjectDataFilter(urlDataResult,table_list_id,f_status_id,industry_id,reg_date_from,reg_date_to){
     $('.page_number').click(function(event){
         var _this = $(this);
         var page = $(this).text();
@@ -504,7 +508,7 @@ function getProjectDataFilter(urlDataResult,table_list_id,f_status_id,industry_i
             $.ajax({
                 type: 'GET',
                 url: urlDataResult,
-                data: {'page': page,'search_type':searchType,'search_content':searchContent,'status_id':nav_selected_val,'f_status_id':f_status_id,'industry_id':industry_id}
+                data: {'page': page,'search_type':searchType,'search_content':searchContent,'status_id':nav_selected_val,'f_status_id':f_status_id,'industry_id':industry_id,'reg_date_from':reg_date_from,'reg_date_to':reg_date_to}
             }).success(function(data){
                     setCurPage(page);
                     $('.page_number_selected').removeClass('page_number_selected');
@@ -808,37 +812,6 @@ function actionCancel(frameHide,frameShow){
     });
 }
 
-function actionCreateJobAssign(){
-    var prj_no = $('#prj_selected_name').attr('prjno');
-    var emp_no = $('#emp_selected_name').attr('empNo');
-    var task_id = $('[name="task"]').val();
-    var act_id = $('[name="activities"]').val();
-    var unit = $('[name="unit"]').val();
-    var quantity = $('[name="quantity"]').val();
-    var assigned_hour = $('[name="assigned_hour"]').val();
-    var start_date = $('[name="year_start"]').val() + '-' + $('[name="month_start"]').val() + '-' + $('[name="day_start"]').val();
-    var end_date = $('[name="year_end"]').val() + '-' + $('[name="month_end"]').val() + '-' + $('[name="day_end"]').val();
-    var comment = $('[name="comments"]').val();
-
-    $.ajax({
-        type: 'GET',
-        url: baseUrl + '/jobassigns/createJobassigns',
-        data: {'prj_no':prj_no,'emp_no':emp_no,'task_id':task_id,'act_id':act_id,'unit':unit,'quantity':quantity,'assigned_hour':assigned_hour,'start_date':start_date,'end_date':end_date,'comment':comment}
-    }).success(function(msg){
-            if(msg == 1){
-                alert("Create Jobassign successful!");
-                $('#detail_job_assign').remove();
-                $('#detail_create_job_assign').animate({
-                    opacity: 0
-                },'fast',function(){
-//                    $('#detail_create_job_assign').remove();
-                    showJobAssignFrame(prj_no);
-                });
-            } else {
-                alert("Create Jobassign fail!");
-            }
-        });
-}
 
 function cbTaskSelectionChange(){
     var taskID = $('#cb_task').val();
@@ -858,56 +831,45 @@ function cbTaskSelectionChange(){
 }
 
 function createNewJobAssign(prj_no){
-    var prj_name = $('#detail_prj_name').text();
-    var form = '<div id="detail_create_job_assign" class="detail_content" style="opacity: 0">' +
-        '<div class="frame_title" style="margin-top: 0">New JobAssign Registration</div>'+
-        '<table border="0">' +
-        '<tr class="form"><td class="form info_form">Project Name</td><td class="form value_form"><div class="value_selected" id="prj_selected_name" prjno="'+prj_no+'" style="font-size: medium;margin-top:2px">'+prj_name+'</div><button class="bt_select">Project Select</button></td></tr>' +
-        '<tr class="form"><td class="form info_form">Employee Name</td><td class="form value_form"><div class="value_selected" id="emp_selected_name"></div><button class="bt_select" onclick="openNewWindow(\'' + baseUrl + '/employees/getAllEmpWindow?id=emp_selected_name\',\'Employees List\')">Employee Select</button></td></tr>' +
-        '<tr class="form"><td class="form info_form">Task</td><td class="form value_form"><select id="cb_task" name="task" style="min-width: 300px" onchange="cbTaskSelectionChange()"><option value="">------Select------</option></select></td></tr>' +
-        '<tr class="form"><td class="form info_form">Activities</td><td class="form value_form"><select id="cb_activities" name="activities" style="min-width: 200px" disabled><option>Task has not been selected</option></select></td></tr>' +
-        '<tr class="form"><td class="form info_form">Unit</td><td class="form value_form"><select id="cb_unit" name="unit" style="min-width: 150px"></select></td></tr>' +
-        '<tr class="form"><td class="form info_form">Quantity</td><td class="form value_form"><input type="text" name="quantity" style="width: 100px"></td></tr>' +
-        '<tr class="form"><td class="form info_form">Assigned Hour</td><td class="form value_form"><input type="text" name="assigned_hour" style="width: 100px">&nbsp;Hour</td></tr>' +
-        '<tr class="form"><td class="form info_form">Start Date</td><td class="form value_form"><select id="cb_year_start" name="year_start"></select>&nbsp;Year&nbsp;<select id="cb_month_start" name="month_start"></select>&nbsp;Month&nbsp;<select id="cb_day_start" name="day_start"></select>&nbsp;Day&nbsp;</td></tr>' +
-        '<tr class="form"><td class="form info_form">End Date</td><td class="form value_form"><select id="cb_year_end" name="year_end"></select>&nbsp;Year&nbsp;<select id="cb_month_end" name="month_end"></select>&nbsp;Month&nbsp;<select id="cb_day_end" name="day_end"></select>&nbsp;Day&nbsp;</td></tr>' +
-        '<tr class="form"><td class="form info_form">Comments</td><td class="form value_form"><textarea name="comments" style="width: 250px"></textarea></td></tr>'+
-        '<tr style="height: 100px"><td colspan="2" class="form" style="text-align: center"><button class="bt_large" style="margin-right: 10px" onclick="actionCreateJobAssign()">Create</button><button class="bt_large" onclick="actionCancel(\'detail_create_job_assign\',\'detail_job_assign\')">Cancel</button></td></tr>' +
-        '</table>' +
-        '</div>';
-    $('.visible').animate({
-        opacity: 0
-    },'fast',function(){
-        $('.visible').hide();
-        $('.visible').removeClass('visible');
-        $('#detail_content_main').append(form);
-        $.ajax({
-            type: 'GET',
-            url: baseUrl + '/unit/getAllUnitCb'
-        }).success(function(data){
-                $('#cb_unit').html(data);
+    $.ajax({
+        type: 'GET',
+        url: baseUrl + '/jobassigns/createNewJobassigns',
+        data: {'prj_no':prj_no}
+    }).success(function(data){
+            $('.visible').animate({
+                opacity: 0
+            },'fast',function(){
+                $('.visible').hide();
+                $('.visible').removeClass('visible');
+                $('#detail_content_main').append(data);
+                $('#detail_create_job_assign').animate({
+                    opacity: 1
+                },'slow',function(){
+                    $('#detail_create_job_assign').addClass('visible');
+                });
             });
-        $.ajax({
-            type: 'GET',
-            url: baseUrl + '/task/getAllTaskCb'
-        }).success(function(data){
-                $('#cb_task').append(data);
+        });
+}
+
+function createNewSpec(prj_no){
+    $.ajax({
+        type: 'GET',
+        url: baseUrl + '/spec/createNewSpec',
+        data: {'prj_no':prj_no}
+    }).success(function(data){
+            $('.visible').animate({
+                opacity: 0
+            },'fast',function(){
+                $('.visible').hide();
+                $('.visible').removeClass('visible');
+                $('#detail_content_main').append(data);
+                $('#detail_create_spec').animate({
+                    opacity: 1
+                },'slow',function(){
+                    $('#detail_create_spec').addClass('visible');
+                });
             });
-        $('#cb_year_start').html(getYearCbData(new Date().getFullYear()));
-        $('#cb_year_end').html(getYearCbData(new Date().getFullYear()));
-        $('#cb_month_start').html(getMonthCbData(new Date().getMonth()));
-        $('#cb_month_end').html(getMonthCbData(new Date().getMonth()));
-        $('#cb_day_start').html(getDayCbData(new Date().getDate()));
-        $('#cb_day_end').html(getDayCbData(new Date().getDate()));
-        CKEDITOR.replace('comments',{
-            skin: 'office2013'
         });
-        $('#detail_create_job_assign').animate({
-            opacity: 1
-        },'slow',function(){
-            $('#detail_create_job_assign').addClass('visible');
-        });
-    });
 }
 
 function showAllTimetrackByEmp(){
@@ -945,36 +907,18 @@ function showAllTimetrackByEmp(){
     }
 }
 
-function showJobAssignFrame(_prj_no){
-    $('.prj_detail_selected').removeClass('prj_detail_selected');
-    $('#prj_detail_menu_jobassign').addClass('prj_detail_selected');
+function reloadListJobAssign(_prj_no){
     $('.visible').animate({
         opacity: 0
     },'fast',function(){
-        $('.visible').hide();
-        $('.visible').removeClass('visible');
+        $('.visible').remove();
         $.ajax({
             type: 'GET',
-            url: baseUrl + '/jobassigns/getAllJobassigns',
+            url: baseUrl + '/jobassigns/reloadListJobassigns',
             data: {prj_no: _prj_no}
         }).success(function(data){
-                var html = '<div id="detail_job_assign" class="detail_content"><button id="bt_create_new_jobassign" onclick="createNewJobAssign(\'' + _prj_no + '\')">New JobAssign</button>' +
-                    '<table id="tbl_job_assign" style="margin-top: 10px;width: 100%">'+
-                    '<tr>' +
-                    '<th>Employees</th>'+
-                    '<th>Task</th>'+
-                    '<th>Unit</th>'+
-                    '<th>Quantity</th>'+
-                    '<th>Date</th>'+
-                    '<th>Hour</th>'+
-                    '<th>Status</th>'+
-                    '<th>Comment</th>'+
-                    '<th>LQA</th>'+
-                    '</tr>'+data+'</table>'
-                    '</div>';
-                if ($('#detail_job_assign').length <= 0){
-                    $('#detail_content_main').append(html);
-                }
+                $('.job_assign').remove();
+                $('#tbl_job_assign').append(data);
                 $('#detail_job_assign').show();
                 $('#detail_job_assign').animate({
                     opacity: 1
@@ -985,22 +929,25 @@ function showJobAssignFrame(_prj_no){
     });
 }
 
-function showBasicInfo(){
-    $('.prj_detail_selected').removeClass('prj_detail_selected');
-    $('#prj_detail_menu_basic').addClass('prj_detail_selected');
-    if ($('#detail_basic_info').hasClass('visible')) {
-        return false;
-    }
+function reloadListSpec(_prj_no){
     $('.visible').animate({
         opacity: 0
     },'fast',function(){
         $('.visible').remove();
-        $('#detail_basic_info').show();
-        $('#detail_basic_info').animate({
-            opacity: 1
-        },'slow',function(){
-            $('#detail_basic_info').addClass('visible');
-        });
+        $.ajax({
+            type: 'GET',
+            url: baseUrl + '/spec/reloadListSpec',
+            data: {prj_no: _prj_no}
+        }).success(function(data){
+                $('.spec').remove();
+                $('#tbl_spec').append(data);
+                $('#detail_list_spec').show();
+                $('#detail_list_spec').animate({
+                    opacity: 1
+                },'slow',function(){
+                    $('#detail_list_spec').addClass('visible');
+                });
+            });
     });
 }
 

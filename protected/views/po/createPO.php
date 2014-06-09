@@ -49,13 +49,14 @@
 <div class="content">
     <div class="content_title"> + PO Management</div>
     <div class="content_left_nav">
+        <a class="nav_item_link" href="#"><div class="nav_item nav_selected">All</div></a>
     </div>
     <script>
         $.ajax({
             type: 'GET',
             url: '<?php echo Employees::BASE_URL ?>/postatus/getAllPoStatus'
         }).success(function(data){
-                $('.content_left_nav').html('<a class="nav_item_link" href="#"><div class="nav_item nav_selected">All</div></a>' + data);
+                $('.content_left_nav').append(data);
             });
     </script>
     <div id="create_project_content" class="content_main">
@@ -78,7 +79,7 @@
                             </script>
                         <?php endif; ?>
                         <div class="value_selected" id="project_selected_name" style="font-size: medium;"></div>
-                        <button onclick="openNewWindow('<?php echo Employees::BASE_URL?>/projects/getAllProjectWindow','Projects List')" class="bt_select">Project Select</button>
+                        <button onclick="openNewWindow('<?php echo Employees::BASE_URL?>/projects/getAllProjectWindow','Projects List',985)" class="bt_select">Project Select</button>
                     </td>
                 </tr>
                 <tr class="form">

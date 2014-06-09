@@ -28,7 +28,7 @@ class JobassignsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','getAllJobassigns','createJobassigns','getAllJobassignsByEmp'),
+				'actions'=>array('index','view','getAllJobassigns','createJobassigns','getAllJobassignsByEmp','createNewJobassigns','reloadListJobassigns'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -171,6 +171,17 @@ class JobassignsController extends Controller
 		}
 	}
 
+    public function actionCreateNewJobassigns(){
+        $prj_no = Yii::app()->request->getParam("prj_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'ProjectNo=:prj_no';
+        $criteria->params = array(':prj_no'=>$prj_no);
+        $model = Projects::model()->find($criteria);
+        $this->renderPartial('createJobassign',array(
+            'model'=>$model,
+        ));
+    }
+
     public function actionCreateJobassigns(){
         $prj_no = Yii::app()->request->getParam("prj_no");
         $emp_no = Yii::app()->request->getParam("emp_no");
@@ -212,27 +223,39 @@ class JobassignsController extends Controller
         $criteria->params = array(':prj_no'=>$prj_no);
         $model = JobassignsInfo::model()->findAll($criteria);
 
-//        foreach ($model as $object) {
-//            $stDate = date("y-m-d", strtotime($object->StartDate));
-//            $endDate = date("y-m-d", strtotime($object->EndDate));
-//            $result = $result.'<tr>
-//                    <td>'.$object->Full_Name.'</td>
-//                    <td>'.$object->TaskName.' > '.$object->ActivitiesName.'</td>
-//                    <td style="text-align: center">'.$object->Unit.'</td>
-//                    <td style="text-align: center">'.$object->Quantity.'</td>
-//                    <td style="text-align: center">'.$stDate.' ~ '.$endDate.'</td>
-//                    <td style="text-align: center">'.$object->AssignedHour.'</td>
-//                    <td style="text-align: center">'.$object->Status.'</td>
-//                    <td>'.$object->Comment.'</td>
-//                    <td style="text-align:center"><input type="checkbox" name="lqa_'.$object->EmpNo.'"></td>
-//                </tr>';
-//        }
-//        echo $result;
-
         $this->layout = '//layouts/ajaxLayout';
         $this->render('jobassignByProj',array(
             'model'=>$model,
         ));
+    }
+
+    public function actionReloadListJobassigns(){
+        $result = '';
+        $prj_no = Yii::app()->request->getParam("prj_no");
+        $criteria = new CDbCriteria();
+        $criteria->condition = 'ProjectNo=:prj_no';
+        $criteria->params = array(':prj_no'=>$prj_no);
+        $model = JobassignsInfo::model()->findAll($criteria);
+        foreach ($model as $object) {
+            $comment = 'No Comment';
+            if (!empty($object->Comment)){
+                $comment = '<div class="icon ion-ios7-eye bt_crud_26 view"></div>';
+            }
+            $stDate = date("y-m-d", strtotime($object->StartDate));
+            $endDate = date("y-m-d", strtotime($object->EndDate));
+            $result = $result.'<tr class="job_assign">
+                    <td>'.$object->Full_Name.'</td>
+                    <td>'.$object->TaskName.' > '.$object->ActivitiesName.'</td>
+                    <td style="text-align: center">'.$object->Unit.'</td>
+                    <td style="text-align: center">'.$object->Quantity.'</td>
+                    <td style="text-align: center">'.$stDate.' ~ '.$endDate.'</td>
+                    <td style="text-align: center">'.$object->AssignedHour.'</td>
+                    <td style="text-align: center">'.$object->Status.'</td>
+                    <td style="text-align: center">'.$comment.'</td>
+                    <td style="text-align:center"><input type="checkbox" name="lqa_'.$object->EmpNo.'"></td>
+                </tr>';
+        }
+        echo $result;
     }
 
     public function actionGetAllJobassignsByEmp(){
